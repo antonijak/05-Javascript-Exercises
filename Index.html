@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercise 1</title>
+</head>
+
+<body>
+  <script>
+
+//     Part I
+// Declare a variable name company and assign it to an initial value “Integrify Academy”.
+//     var company = 'Integrify Academy';
+     
+
+// Print the string  on the browser console using console.log()
+//     console.log(company);
+
+// Print the length of the string  on the browser console using console.log()
+//     console.log(company.length);
+
+// Change all the string to capital letters using toUpperCase() method
+//     console.log(company.toUpperCase());
+
+// Change all the string to small letters using toLowerCase() method
+//     console.log(company.toLowerCase()); 
+
+// Cut(slice) out the first word of the string using slice, substr() or substring() method
+//     console.log(company.slice(0, 9));
+//     console.log(company.substring(1, 9));
+
+// Check if the string contains a word Academy using includes() method
+//     console.log(company.includes('Academy'));
+
+// Split the string into array using split() method
+//     var new1 = company.split('');
+//     console.log(new1);
+   
+// Change Integrify Academy  to Microsoft Academy using replace() method.
+
+//     console.log(company.replace('Integrify', 'Microsoft'));
+
+// What is the index of A in ‘Integrify Academy’ string use charAt()
+//     console.log(company);
+//     console.log(company.charAt(2));
+
+//     // What is the character code of A in ‘Integrify Academy’ string using charCodeAt()
+
+//     console.log(company.charCodeAt(1));
+
+//     // Use indexOf to determine the position of  the first occurrence of e in Integrify Academy
+
+//     console.log(company.indexOf('A'));
+
+//     // Use lastIndexOf to determine the position of the last occurrence of e in Integrify Academy
+
+//     console.log(company.lastIndexOf('e'));
+
+//     // Use trim() to remove if there is trailing whitespace at the beginning and the end of the 
+
+//     company = ' Integrify Academy ';
+//     console.log(company.trim());
+
+//     company = 'Integrify Academy';
+
+//     // Use startsWith() method with the string Integrify Academy make the result true
+
+//     console.log(company.startsWith('I'));
+
+//     // Use endsWith() method with the string Integrify Academy make the result true
+
+//     console.log(company.endsWith('y'));
+
+//     Use  match() method to find all the a’s in Integrify Academy
+
+//     console.log(company.match(/e*/gm));
+
+//     var myAge = 30;
+//     var yourAge = 31;
+
+//     console.log(`I am ${myAge} years old. \nYou are ${yourAge} years old.`);
+
+//     // var userAge = prompt('Enter your age:');
+
+//     if (userAge >= 18) {
+//        console.log('You are old enough to drive');
+//     } else {
+//      var yearsTo = 18 - userAge;
+//      console.log(`You are left with ${yearsTo} years to drive.`);
+//     }
+
+// Compare the values of myAge and yourAge using if … else. Based on the comparison log to console who is older (me or you)Use prompt(“Enter your age:”) to get the age as input.
+
+//       // var yourAge1 = prompt('Enter your age:');
+//       // var myAge1 = 30;
+
+      // if (yourAge1 > myAge1) {
+      //   var dif = yourAge1 - myAge1;
+      //   console.log(`You are ${dif} years older than me.`)
+      // } else if (yourAge1 == myAge1){
+      //   console.log('We are the same age');
+      // } else {
+      //   var dif = myAge1 - yourAge1
+      //   console.log(`I am ${dif} years older than you`);
+      // }
+
+    // var itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
+    // console.log(itCompanies);
+    // console.log(itCompanies.length);
+
+//     for (company of itCompanies){
+//       console.log(company);
+//     }
+
+//     for (company of itCompanies){
+//       console.log(company.toUpperCase());
+//     }
+
+//     console.log(`${itCompanies[0]}, ${itCompanies[1]}, ${itCompanies[2]}, ${itCompanies[3]}, ${itCompanies[4]}, ${itCompanies[5]} and ${itCompanies[6]} are big companies.`);
+
+//     console.log(itCompanies.sort());
+//     console.log(itCompanies.reverse());
+
+//     for (i = 0; i < itCompanies.length; i++) {
+//       console.log(itCompanies[i]);
+//     }
+
+//     function printArray (array){
+//      console.log(array);
+//     };
+
+//     printArray(itCompanies);
+
+// 8. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array(dont’ use method).
+ 
+
+
+
+// function reverseArray (array){
+//   var newArray = []; 
+//   for (item of array){
+//   newArray.unshift(item);
+//   }
+//   return newArray
+// }
+
+
+// console.log(reverseArray(itCompanies));
+
+
+
+// 9. Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array. 
+
+// function capitalizeArray (array){
+//   for (item of array){
+//     var upper = item.toString().toUpperCase();
+//     array[array.indexOf(item)] = upper;
+
+//   }
+
+//   return array
+// }
+
+// console.log(capitalizeArray(itCompanies));
+
+
+
+// 10.  Declare a function name removeItem. It returns array after removing an item
+
+
+// function removeItem(array){
+//   array.pop();
+//   return array
+// }
+
+// console.log(removeItem(itCompanies));
+
+// //  Declare a function name addItem. It returns array after adding an item
+
+// function addItem(array, item){
+//  array.push(item);
+//  return array
+// }
+
+// console.log(addItem(itCompanies, 7));
+
+
+//     function sumOfEven(number){
+//       var sum = 0;
+//       for (i = 0; i < number; i++){
+//         if (i % 2 === 0) {
+//           sum += i;
+//         }
+//       }
+//       return sum
+//     };
+
+//     console.log(sumOfEven(5));
+
+
+//     function evensAndOdds(number){
+//       var evens = 0;
+//       var odds = 0;
+//       for (i = 0; i < number; i++){
+//         if (i % 2 === 0) {
+//           evens += 1;
+//         } else {
+//           odds += 1;
+//         }
+//       }
+//       console.log(`The number of evens is ${evens} and odds ${odds}.`);
+//     }
+
+//     evensAndOdds(10);
+
+// //RANDOM HEX COLOR GENERATOR EX.1
+
+//     function randomHexaNumberGenerator (){
+//       var randomHex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+     
+//       var hex = '#';
+//       for (i = 0; i < 7; i++){
+//         var randomNum = Math.floor(Math.random() * randomHex.length);
+//         hex += randomHex[randomNum];
+//       }
+//       return hex
+//     }
+
+//     console.log(randomHexaNumberGenerator());
+
+// //RANDOM HEX COLOR GENERATOR EX.2
+
+//     function randomHexaNumberGenerator1 (){
+//       var random = Math.random().toString(16).slice(2,8);
+//       var hex = `#${random}`;
+//       return hex
+//     }
+
+//     console.log(randomHexaNumberGenerator1());
+       
+// // Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+
+//       function userIdGenerator (){
+//       var random = Math.random().toString(16).slice(2,9);
+//       return random
+//       }
+//       console.log(userIdGenerator());
+
+// // Modify question number 11 . Declare a function name userIdGeneratedByUser. 
+// // It doesn’t take any parameter but it takes two inputs using prompt().
+// // One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
+ 
+//     // var numberOfChar = parseInt(prompt('How many characters do you want?'));
+//     // var numberOfId  = parseInt(prompt('How many id\'s do you want?'));
+
+
+//     function userIdGenerator(){
+  //     var ids = [];
+  //     for (i = 0; i < numberOfId; i++){
+  //      var randomID= Math.random().toString(16).slice(2, numberOfChar + 2);
+  //      ids[i]= randomID;
+  //     }
+  //     return ids
+//      }
+
+ // console.log(userIdGenerator());
+// Write a function name displayDateTime  and it display in this format: 28/08/2018 04:08
+// Use the new Date() object to get month, date, year, hour and minute.
+
+// function numbersWithZero(number) {
+//     return String("000" + number).slice(-2);
+// }
+
+// function displayDateTime (){
+//  var date = new Date();
+//  var day = numbersWithZero(date.getDate());
+//  var month = numbersWithZero(date.getMonth() + 1);
+//  var year = date.getFullYear();
+//  var hour = numbersWithZero(date.getHours());
+//  var minutes = numbersWithZero(date.getMinutes());
+
+//  return `${day}/${month}/${year} ${hour}:${minutes}`
+// }
+
+// console.log(displayDateTime());
+
+// // Write a function name rgbColorGenerator and it generates rgb colors. '
+// // Integer between 0 and 255.
+
+
+// function rgbColorGenerator(){
+  
+//   var rgbValue = [];
+//   for (i = 0; i < 3; i++){
+//     var threeNumbers = Math.floor(Math.random() * 256);
+//     rgbValue[i] = threeNumbers;
+//     console.log(rgbValue)
+//     }
+
+//   return `rgb(${rgbValue})`
+// }
+
+// console.log(rgbColorGenerator());
+
+// 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncome,totalExpense and accountBalance methods. Income is a set of incomes and its description and the same for expense. 
+
+var personAccount = {
+  firstName: 'David', 
+  lastName: 'Smith',
+  income: {salary: 100, freelance: 50, etsy: 10},
+  expense: {bills: 50, food: 10, travel: 50},
+  totalIncome: function(){
+    var sum = this.income.salary + this.income.freelance + this.income.etsy;
+    return sum
+  },
+  totalExpense: function(){
+    var sum2 = this.expense.bills + this.expense.food + this.expense.travel;
+    return sum2
+  },
+  accountBalance: function(){
+    var balance = this.totalIncome() - this.totalExpense();
+    return balance
+  }
+};
+console.log(personAccount.totalIncome())
+console.log(personAccount.totalExpense())
+console.log(personAccount.accountBalance())
+
+
+
+// 1. Print a seven digit two lottery rows for next weekend’s Lottery using console.log().
+//  No need to arrange numbers in ascending order. 
+//  Hint 1: Math.floor(Math.random()*9)+1 will return numbers between 1 .. 9
+
+
+// function lotteryGenerator(){
+  
+//   var lotteryNumber = [];
+//   for (row = 0; row < 7; row++){
+//     var number = Math.floor(Math.random() * 9) + 1;
+//     lotteryNumber[row] = number;
+//   }
+
+//   return lotteryNumber.sort().toString()
+// }
+// console.log(lotteryGenerator());
+
+// console.log(`${lotteryGenerator()}\n${lotteryGenerator()}`);
+
+// Modify your lottery script: User will be prompted how many lottery rows they would like to have
+// Create a function that returns a single row of numbers as a string
+// Call your function as many times as needed and print the rows in console
+// (This is your second version – still no need to check if there is same number twice, 
+// no need arrange numbers in ascending order)
+
+// var numberOfRows = parseInt(prompt('How many rows do you want?'));
+
+// function multipleLotteryGenerator(numberOfRows){
+//   var lotteryArray  = [];
+//   for (i = 0; i < numberOfRows; i++){
+//     lotteryArray [i] = lotteryGenerator();
+//   } 
+//   return lotteryArray 
+// }
+
+// console.log(multipleLotteryGenerator(numberOfRows));
+
+// 3. Modify your lottery script to use arrays.
+// Your function should:
+// create an array
+// add 7 random numbers into your array
+// sort array in ascending order (check http://www.w3schools.com/jsref/jsref_sort.asp)
+//  return the array
+// call function as many times as user asks
+// print lottery rows to console
+
+// var numberOfRows = parseInt(prompt('How many rows do you want?'));
+
+// function multipleLotteryGenerator(numberOfRows){
+//   var lotteryArray  = []; 
+  
+//   for (a = 0; a < numberOfRows; a++){
+//     lotteryArray [a] = lotteryGenerator();
+//     console.log(lotteryArray[a]);
+//   } 
+//   return lotteryArray
+// }
+
+// multipleLotteryGenerator(numberOfRows);
+
+
+
+  </script>
+</body>
+
+</html>
