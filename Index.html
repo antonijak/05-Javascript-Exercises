@@ -13,11 +13,11 @@
 
 //     Part I
 // Declare a variable name company and assign it to an initial value “Integrify Academy”.
-//     var company = 'Integrify Academy';
+    var company = 'Integrify Academy';
      
 
 // Print the string  on the browser console using console.log()
-//     console.log(company);
+    console.log(company);
 
 // Print the length of the string  on the browser console using console.log()
 //     console.log(company.length);
@@ -231,15 +231,33 @@
 
 //     console.log(randomHexaNumberGenerator());
 
-// //RANDOM HEX COLOR GENERATOR EX.2
+//RANDOM HEX COLOR GENERATOR EX.2
 
-//     function randomHexaNumberGenerator1 (){
-//       var random = Math.random().toString(16).slice(2,8);
-//       var hex = `#${random}`;
-//       return hex
-//     }
+    // function randomHexaNumberGenerator1 (){
+    //   var random = Math.random().toString(16).slice(2,8);
+    //   var hex = `#${random}`;
+    //   return hex
+    // }
 
-//     console.log(randomHexaNumberGenerator1());
+    // console.log(randomHexaNumberGenerator1());
+
+
+    // SOLUTION #2
+
+    // function randomHexaNumberGenerator1 (){
+    //   var characters = '123456789abcdef'
+     
+    //   var hex = '#';
+    //   for (i = 0; i < 6; i++){
+    //     var random = Math.floor(Math.random() * 15);
+    //     console.log(random);
+    //     hex = hex.concat(characters.charAt(random));
+    //   }
+      
+    //   return hex
+    // }
+
+    // console.log(randomHexaNumberGenerator1());
        
 // // Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
 
@@ -248,6 +266,23 @@
 //       return random
 //       }
 //       console.log(userIdGenerator());
+
+// SOLUTION #2
+
+//    function userIdGenerator (){
+//       var characters = '123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+     
+//       var id = '';
+//       for (i = 0; i < 7; i++){
+//         var random = Math.floor(Math.random() * 35);
+//         console.log(random);
+//         id = id.concat(characters.charAt(random));
+//       }
+      
+//       return id
+//     }
+
+//     console.log(userIdGenerator());
 
 // // Modify question number 11 . Declare a function name userIdGeneratedByUser. 
 // // It doesn’t take any parameter but it takes two inputs using prompt().
@@ -307,27 +342,27 @@
 
 // 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncome,totalExpense and accountBalance methods. Income is a set of incomes and its description and the same for expense. 
 
-var personAccount = {
-  firstName: 'David', 
-  lastName: 'Smith',
-  income: {salary: 100, freelance: 50, etsy: 10},
-  expense: {bills: 50, food: 10, travel: 50},
-  totalIncome: function(){
-    var sum = this.income.salary + this.income.freelance + this.income.etsy;
-    return sum
-  },
-  totalExpense: function(){
-    var sum2 = this.expense.bills + this.expense.food + this.expense.travel;
-    return sum2
-  },
-  accountBalance: function(){
-    var balance = this.totalIncome() - this.totalExpense();
-    return balance
-  }
-};
-console.log(personAccount.totalIncome())
-console.log(personAccount.totalExpense())
-console.log(personAccount.accountBalance())
+// var personAccount = {
+//   firstName: 'David', 
+//   lastName: 'Smith',
+//   income: {salary: 100, freelance: 50, etsy: 10},
+//   expense: {bills: 50, food: 10, travel: 50},
+//   totalIncome: function(){
+//     var sum = this.income.salary + this.income.freelance + this.income.etsy;
+//     return sum
+//   },
+//   totalExpense: function(){
+//     var sum2 = this.expense.bills + this.expense.food + this.expense.travel;
+//     return sum2
+//   },
+//   accountBalance: function(){
+//     var balance = this.totalIncome() - this.totalExpense();
+//     return balance
+//   }
+// };
+// console.log(personAccount.totalIncome())
+// console.log(personAccount.totalExpense())
+// console.log(personAccount.accountBalance())
 
 
 
