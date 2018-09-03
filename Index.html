@@ -302,6 +302,8 @@
 //      }
 
  // console.log(userIdGenerator());
+ 
+// 14. Date Object
 // Write a function name displayDateTime  and it display in this format: 28/08/2018 04:08
 // Use the new Date() object to get month, date, year, hour and minute.
 
@@ -340,7 +342,7 @@
 
 // console.log(rgbColorGenerator());
 
-// 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncome,totalExpense and accountBalance methods. Income is a set of incomes and its description and the same for expense. 
+// 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncome,         totalExpense and accountBalance methods. Income is a set of incomes and its description and the same for expense. 
 
 var personAccount = {
   firstName: 'David', 
@@ -365,13 +367,13 @@ console.log(personAccount.totalExpense())
 console.log(personAccount.accountBalance())
 
 // 21. Calculate the total annual income of the person from the following text. 
-// ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online course’
+//    ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online course’
 
 console.log(personAccount.totalIncome())
 
 // 1. Print a seven digit two lottery rows for next weekend’s Lottery using console.log().
-//  No need to arrange numbers in ascending order. 
-//  Hint 1: Math.floor(Math.random()*9)+1 will return numbers between 1 .. 9
+//    No need to arrange numbers in ascending order. 
+//    Hint 1: Math.floor(Math.random()*9)+1 will return numbers between 1 .. 9
 
 
 // function lotteryGenerator(){
@@ -388,11 +390,11 @@ console.log(personAccount.totalIncome())
 
 // console.log(`${lotteryGenerator()}\n${lotteryGenerator()}`);
 
-// Modify your lottery script: User will be prompted how many lottery rows they would like to have
-// Create a function that returns a single row of numbers as a string
-// Call your function as many times as needed and print the rows in console
-// (This is your second version – still no need to check if there is same number twice, 
-// no need arrange numbers in ascending order)
+// 2. Modify your lottery script: User will be prompted how many lottery rows they would like to have
+//    Create a function that returns a single row of numbers as a string
+//    Call your function as many times as needed and print the rows in console
+//    (This is your second version – still no need to check if there is same number twice, 
+//    no need to arrange numbers in ascending order)
 
 // var numberOfRows = parseInt(prompt('How many rows do you want?'));
 
@@ -407,13 +409,13 @@ console.log(personAccount.totalIncome())
 // console.log(multipleLotteryGenerator(numberOfRows));
 
 // 3. Modify your lottery script to use arrays.
-// Your function should:
-// create an array
-// add 7 random numbers into your array
-// sort array in ascending order (check http://www.w3schools.com/jsref/jsref_sort.asp)
-//  return the array
-// call function as many times as user asks
-// print lottery rows to console
+//    Your function should:
+//    create an array
+//    add 7 random numbers into your array
+//    sort array in ascending order (check http://www.w3schools.com/jsref/jsref_sort.asp)
+//    return the array
+//    call function as many times as user asks
+//    print lottery rows to console
 
 // var numberOfRows = parseInt(prompt('How many rows do you want?'));
 
@@ -430,6 +432,17 @@ console.log(personAccount.totalIncome())
 // multipleLotteryGenerator(numberOfRows);
 
 
+// 9. Ternary Operator
+//    let a = 4;
+//    let b = 3;
+//    If a is greater than b return a is greater than b else a is less than b.
+
+let a = 4;
+let b = 3;
+
+var greatherThan = (a > b) ? "a is greater than b" : "a is less than b";
+
+console.log(greatherThan);
 
   </script>
 </body>
