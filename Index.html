@@ -390,81 +390,148 @@
 
 // 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncomes, totalExpenses, acountInfo,addIncome, addExpence and accountBalance methods.Income is a set of incomes and its description and the same for expense. 
 
+// var personAccount = {
+//   firstName: 'David', 
+//   lastName: 'Smith',
+//   income: {salary: 4000, bonus: 1000, onlineCourse: 5500},
+//   expense: {bills: 50, food: 10, travel: 50},
+//   totalIncome: function(){
+//     let sum = this.income.salary + this.income.bonus + this.income.onlineCourse;
+//     return sum
+//   },
+//   totalExpense: function(){
+//     let sum2 = this.expense.bills + this.expense.food + this.expense.travel;
+//     return sum2
+//   },
+//   addIncome: function(){
+//     let incomeKey = prompt('What is the income?').toString();
+//     let incomeValue = parseInt(prompt('What is the amount of income?'));
+//     return this.income[incomeKey] = incomeValue;
+//   },
+//   addExpense: function(){
+//     let expenseKey = prompt('What is the expense?').toString();
+//     let expenseValue = parseInt(prompt('What is the amount of the expense?'));
+//     return this.expense[incomeKey] = incomeValue;
+//   },
+//   accountBalance: function(){
+//     let balance = this.totalIncome() - this.totalExpense();
+//     return balance
+//   },
+//   accountInfo: function(){
+//     var incomeInfo = 'INCOME: \n';
+//     for (item in this.income){
+//       incomeInfo += item + ': ' + this.income[item]+ '€' + '\n'
+//     }
+//     var expenseInfo = 'EXPENSE: \n';
+//     for (item in this.expense){
+//       expenseInfo += item + ': ' + this.expense[item]+ '€' + '\n'
+//     }
+//     console.log(`${this.firstName}\n${this.lastName}\n\n${incomeInfo}TOTAL: ${this.totalIncome()}€\n\n${expenseInfo}TOTAL: ${this.totalExpense()}€\n\nBALANCE: ${this.accountBalance()}€ `);
+    
+//   }
+// };
+
+
+
+// // personAccount.addIncome();
+// console.log(personAccount.income);
+
+// console.log('__________________________');
+// personAccount.accountInfo();
+// console.log('__________________________');
+
+
+
+// console.log(personAccount.totalExpense())
+// console.log(personAccount.accountBalance())
+// console.log(personAccount.totalIncome())
+
+// SOLUTION #2:
+
 var personAccount = {
   firstName: 'David', 
   lastName: 'Smith',
-  income: {salary: 4000, bonus: 1000, onlineCourse: 5500},
-  expense: {bills: 50, food: 10, travel: 50},
+  income: [{description: 'salary', amount: 4000}, {description: 'bonus', amount: 1000}, {description: 'online course', amount: 5500}],
+  expense: [{description: 'bills', amount: 50}, {description: 'food', amount: 10}, {description: 'travel', amount: 50}],
   totalIncome: function(){
-    let sum = this.income.salary + this.income.bonus + this.income.onlineCourse;
+    let amounts = this.income.map(function(item) {return item.amount})
+    let sum = 0;
+    for (let i = 0; i < amounts.length; i++){
+      sum += amounts[i]
+    }
     return sum
   },
-  totalExpense: function(){
-    let sum2 = this.expense.bills + this.expense.food + this.expense.travel;
-    return sum2
+  totalExpense:  function(){
+    let amounts = this.expense.map(function(item) {return item.amount})
+    let sum = 0;
+    for (let i = 0; i < amounts.length; i++){
+      sum += amounts[i]
+    }
+    return sum
   },
   addIncome: function(){
     let incomeKey = prompt('What is the income?').toString();
-    let incomeValue = parseInt(prompt('What is the amount of income?'));
-    return this.income[incomeKey] = incomeValue;
+    let incomeValue = parseInt(prompt('What is the amount of income?')); 
+    let newIncome = {};
+    newIncome.description = incomeKey;
+    newIncome.amount = incomeValue;
+    this.income.push(newIncome)
   },
   addExpense: function(){
     let expenseKey = prompt('What is the expense?').toString();
     let expenseValue = parseInt(prompt('What is the amount of the expense?'));
-    return this.expense[incomeKey] = incomeValue;
+    let newExpense = {};
+    newExpense.description = incomeKey;
+    newExpense.amount = incomeValue;
+    this.income.push(newExpense)
   },
   accountBalance: function(){
     let balance = this.totalIncome() - this.totalExpense();
     return balance
   },
-  acountInfo: function(){
-    var incomeInfo = 'INCOME: \n';
-    for (item in this.income){
-      incomeInfo += item + ': ' + this.income[item]+ '€' + '\n'
-    }
-    var expenseInfo = 'EXPENSE: \n';
-    for (item in this.expense){
-      expenseInfo += item + ': ' + this.expense[item]+ '€' + '\n'
-    }
-    console.log(`${this.firstName}\n${this.lastName}\n\n${incomeInfo}TOTAL: ${this.totalIncome()}€\n\n${expenseInfo}TOTAL: ${this.totalExpense()}€\n\nBALANCE: ${this.accountBalance()}€ `);
-    
+  accountInfo: function(){
+    let incomeInfo = this.income.map(function(credit){
+      return `${credit.description}: ${credit.amount}`
+    })
+    let expenseInfo = this.expense.map(function(debit){
+      return `${debit.description}: ${debit.amount}`
+    })
+   
+   return (`${this.firstName}\n${this.lastName}\n\n${incomeInfo} TOTAL: ${this.totalIncome()}€\n\n${expenseInfo} TOTAL: ${this.totalExpense()}€\n\nBALANCE: ${this.accountBalance()}€ `);
   }
 };
 
 
-
+// console.log(personAccount.totalIncome())
+// console.log(personAccount.totalExpense())
 // personAccount.addIncome();
-console.log(personAccount.income);
-
-console.log('__________________________');
-personAccount.acountInfo();
-console.log('__________________________');
-
+// personAccount.addExpense();
+console.log(personAccount.accountInfo());
+console.log(personAccount.income.salary);
+// console.log(personAccount.accountBalance())
 
 
-console.log(personAccount.totalExpense())
-console.log(personAccount.accountBalance())
-console.log(personAccount.totalIncome())
+
 
 // _______________________________________________________________________________________
 // 15. Regular Expression
 //     Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro        annual bonus, 5500 euro online courses’
 // _______________________________________________________________________________________
 
-var paragraph = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses';
-var regex = /[0-9]+/g;
-var found = paragraph.match(regex);
-console.log(found);
+// var paragraph = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses';
+// var regex = /[0-9]+/g;
+// var found = paragraph.match(regex);
+// console.log(found);
 
-function newIncomes(array){
-personAccount.income.salary = parseInt(array[0]);
-personAccount.income.bonus = parseInt(array[1]);
-personAccount.income.onlineCourse = parseInt(array[2]);
-}
+// function newIncomes(array){
+// personAccount.income.salary = parseInt(array[0]);
+// personAccount.income.bonus = parseInt(array[1]);
+// personAccount.income.onlineCourse = parseInt(array[2]);
+// }
 
-newIncomes(found);
+// newIncomes(found);
 
-console.log(personAccount.totalIncome()) 
+// console.log(personAccount.totalIncome()) 
 
 
 
