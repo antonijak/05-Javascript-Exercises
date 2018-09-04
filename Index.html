@@ -11,70 +11,109 @@
 <body>
   <script>
 
-//     Part I
-// Declare a variable name company and assign it to an initial value “Integrify Academy”.
+// == PART ONE==========================================================================================================
+
+// 3. Strings
+// a) Declare a variable name company and assign it to an initial value “Integrify Academy”.
+// _______________________________________________________________________________________
     var company = 'Integrify Academy';
      
-
+// _______________________________________________________________________________________
 // Print the string  on the browser console using console.log()
+// _______________________________________________________________________________________
+
     console.log(company);
 
+// _______________________________________________________________________________________
 // Print the length of the string  on the browser console using console.log()
+// _______________________________________________________________________________________
+
 //     console.log(company.length);
 
+// _______________________________________________________________________________________
 // Change all the string to capital letters using toUpperCase() method
+// _______________________________________________________________________________________
+
 //     console.log(company.toUpperCase());
 
+// _______________________________________________________________________________________
 // Change all the string to small letters using toLowerCase() method
+// _______________________________________________________________________________________
+
 //     console.log(company.toLowerCase()); 
 
+// _______________________________________________________________________________________
 // Cut(slice) out the first word of the string using slice, substr() or substring() method
+// _______________________________________________________________________________________
+
 //     console.log(company.slice(0, 9));
 //     console.log(company.substring(1, 9));
-
+// _______________________________________________________________________________________
 // Check if the string contains a word Academy using includes() method
+// _______________________________________________________________________________________
+
 //     console.log(company.includes('Academy'));
 
+// _______________________________________________________________________________________
 // Split the string into array using split() method
+// _______________________________________________________________________________________
 //     var new1 = company.split('');
 //     console.log(new1);
    
+// _______________________________________________________________________________________
 // Change Integrify Academy  to Microsoft Academy using replace() method.
+// _______________________________________________________________________________________
 
 //     console.log(company.replace('Integrify', 'Microsoft'));
-
-// What is the index of A in ‘Integrify Academy’ string use charAt()
 //     console.log(company);
-//     console.log(company.charAt(2));
 
-//     // What is the character code of A in ‘Integrify Academy’ string using charCodeAt()
+// _______________________________________________________________________________________
+// What is the index of A in ‘Integrify Academy’ string use charAt()
+// _______________________________________________________________________________________
+
+//     console.log(company.charAt(2));
+//     console.log(company);
+
+// _______________________________________________________________________________________
+// What is the character code of A in ‘Integrify Academy’ string using charCodeAt()
+// _______________________________________________________________________________________
 
 //     console.log(company.charCodeAt(1));
 
-//     // Use indexOf to determine the position of  the first occurrence of e in Integrify Academy
+// _______________________________________________________________________________________
+// Use indexOf to determine the position of  the first occurrence of e in Integrify Academy
+// _______________________________________________________________________________________
 
 //     console.log(company.indexOf('A'));
 
-//     // Use lastIndexOf to determine the position of the last occurrence of e in Integrify Academy
+// _______________________________________________________________________________________
+// Use lastIndexOf to determine the position of the last occurrence of e in Integrify Academy
+// _______________________________________________________________________________________
 
-//     console.log(company.lastIndexOf('e'));
+//   console.log(company.lastIndexOf('e'));
 
-//     // Use trim() to remove if there is trailing whitespace at the beginning and the end of the 
+// _______________________________________________________________________________________
+// Use trim() to remove if there is trailing whitespace at the beginning and the end of the 
+// _______________________________________________________________________________________
 
 //     company = ' Integrify Academy ';
 //     console.log(company.trim());
 
-//     company = 'Integrify Academy';
+// _______________________________________________________________________________________
+// Use startsWith() method with the string Integrify Academy make the result true
+// _______________________________________________________________________________________
 
-//     // Use startsWith() method with the string Integrify Academy make the result true
+//    console.log(company.startsWith('I'));
 
-//     console.log(company.startsWith('I'));
+// _______________________________________________________________________________________
+// Use endsWith() method with the string Integrify Academy make the result true
+// _______________________________________________________________________________________
 
-//     // Use endsWith() method with the string Integrify Academy make the result true
+//    console.log(company.endsWith('y'));
 
-//     console.log(company.endsWith('y'));
-
-//     Use  match() method to find all the a’s in Integrify Academy
+// _______________________________________________________________________________________
+// Use  match() method to find all the a’s in Integrify Academy
+// _______________________________________________________________________________________
 
 //     console.log(company.match(/e*/gm));
 
@@ -83,7 +122,13 @@
 
 //     console.log(`I am ${myAge} years old. \nYou are ${yourAge} years old.`);
 
-//     // var userAge = prompt('Enter your age:');
+// _______________________________________________________________________________________
+// 8. Conditional
+// 
+// a) Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not         18 give feedback to wait for the years he supposed to wait for.
+// _______________________________________________________________________________________
+
+//   var userAge = prompt('Enter your age:');
 
 //     if (userAge >= 18) {
 //        console.log('You are old enough to drive');
@@ -92,7 +137,8 @@
 //      console.log(`You are left with ${yearsTo} years to drive.`);
 //     }
 
-// Compare the values of myAge and yourAge using if … else. Based on the comparison log to console who is older (me or you)Use prompt(“Enter your age:”) to get the age as input.
+// _______________________________________________________________________________________
+// b) Compare the values of myAge and yourAge using if … else. Based on the comparison log to console who is older (me or you)Use        prompt(“Enter your age:”) to get the age as input.
 
 //       // var yourAge1 = prompt('Enter your age:');
 //       // var myAge1 = 30;
@@ -302,7 +348,7 @@
 //      }
 
  // console.log(userIdGenerator());
- 
+
 // 14. Date Object
 // Write a function name displayDateTime  and it display in this format: 28/08/2018 04:08
 // Use the new Date() object to get month, date, year, hour and minute.
@@ -342,7 +388,7 @@
 
 // console.log(rgbColorGenerator());
 
-// 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncome,         totalExpense and accountBalance methods. Income is a set of incomes and its description and the same for expense. 
+// 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncomes, totalExpenses, acountInfo,addIncome, addExpence and accountBalance methods.Income is a set of incomes and its description and the same for expense. 
 
 var personAccount = {
   firstName: 'David', 
@@ -350,30 +396,85 @@ var personAccount = {
   income: {salary: 4000, bonus: 1000, onlineCourse: 5500},
   expense: {bills: 50, food: 10, travel: 50},
   totalIncome: function(){
-    var sum = this.income.salary + this.income.bonus + this.income.onlineCourse;
+    let sum = this.income.salary + this.income.bonus + this.income.onlineCourse;
     return sum
   },
   totalExpense: function(){
-    var sum2 = this.expense.bills + this.expense.food + this.expense.travel;
+    let sum2 = this.expense.bills + this.expense.food + this.expense.travel;
     return sum2
   },
+  addIncome: function(){
+    let incomeKey = prompt('What is the income?').toString();
+    let incomeValue = parseInt(prompt('What is the amount of income?'));
+    return this.income[incomeKey] = incomeValue;
+  },
+  addExpense: function(){
+    let expenseKey = prompt('What is the expense?').toString();
+    let expenseValue = parseInt(prompt('What is the amount of the expense?'));
+    return this.expense[incomeKey] = incomeValue;
+  },
   accountBalance: function(){
-    var balance = this.totalIncome() - this.totalExpense();
+    let balance = this.totalIncome() - this.totalExpense();
     return balance
+  },
+  acountInfo: function(){
+    var incomeInfo = 'INCOME: \n';
+    for (item in this.income){
+      incomeInfo += item + ': ' + this.income[item]+ '€' + '\n'
+    }
+    var expenseInfo = 'EXPENSE: \n';
+    for (item in this.expense){
+      expenseInfo += item + ': ' + this.expense[item]+ '€' + '\n'
+    }
+    console.log(`${this.firstName}\n${this.lastName}\n\n${incomeInfo}TOTAL: ${this.totalIncome()}€\n\n${expenseInfo}TOTAL: ${this.totalExpense()}€\n\nBALANCE: ${this.accountBalance()}€ `);
+    
   }
 };
 
+
+
+// personAccount.addIncome();
+console.log(personAccount.income);
+
+console.log('__________________________');
+personAccount.acountInfo();
+console.log('__________________________');
+
+
+
 console.log(personAccount.totalExpense())
 console.log(personAccount.accountBalance())
-
-// 21. Calculate the total annual income of the person from the following text. 
-//    ‘He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online course’
-
 console.log(personAccount.totalIncome())
+
+// _______________________________________________________________________________________
+// 15. Regular Expression
+//     Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro        annual bonus, 5500 euro online courses’
+// _______________________________________________________________________________________
+
+var paragraph = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses';
+var regex = /[0-9]+/g;
+var found = paragraph.match(regex);
+console.log(found);
+
+function newIncomes(array){
+personAccount.income.salary = parseInt(array[0]);
+personAccount.income.bonus = parseInt(array[1]);
+personAccount.income.onlineCourse = parseInt(array[2]);
+}
+
+newIncomes(found);
+
+console.log(personAccount.totalIncome()) 
+
+
+
+
+// == PART TWO ==========================================================================================================
 
 // 1. Print a seven digit two lottery rows for next weekend’s Lottery using console.log().
 //    No need to arrange numbers in ascending order. 
 //    Hint 1: Math.floor(Math.random()*9)+1 will return numbers between 1 .. 9
+// _______________________________________________________________________________________
 
 
 // function lotteryGenerator(){
@@ -390,11 +491,13 @@ console.log(personAccount.totalIncome())
 
 // console.log(`${lotteryGenerator()}\n${lotteryGenerator()}`);
 
+// _______________________________________________________________________________________
 // 2. Modify your lottery script: User will be prompted how many lottery rows they would like to have
 //    Create a function that returns a single row of numbers as a string
 //    Call your function as many times as needed and print the rows in console
 //    (This is your second version – still no need to check if there is same number twice, 
 //    no need to arrange numbers in ascending order)
+// _______________________________________________________________________________________
 
 // var numberOfRows = parseInt(prompt('How many rows do you want?'));
 
@@ -408,6 +511,7 @@ console.log(personAccount.totalIncome())
 
 // console.log(multipleLotteryGenerator(numberOfRows));
 
+// _______________________________________________________________________________________
 // 3. Modify your lottery script to use arrays.
 //    Your function should:
 //    create an array
@@ -416,6 +520,7 @@ console.log(personAccount.totalIncome())
 //    return the array
 //    call function as many times as user asks
 //    print lottery rows to console
+// _______________________________________________________________________________________
 
 // var numberOfRows = parseInt(prompt('How many rows do you want?'));
 
@@ -431,11 +536,12 @@ console.log(personAccount.totalIncome())
 
 // multipleLotteryGenerator(numberOfRows);
 
-
+// _______________________________________________________________________________________
 // 9. Ternary Operator
 //    let a = 4;
 //    let b = 3;
 //    If a is greater than b return a is greater than b else a is less than b.
+// _______________________________________________________________________________________
 
 let a = 4;
 let b = 3;
@@ -443,7 +549,7 @@ let b = 3;
 var greatherThan = (a > b) ? "a is greater than b" : "a is less than b";
 
 console.log(greatherThan);
-
+// _______________________________________________________________________________________
   </script>
 </body>
 
