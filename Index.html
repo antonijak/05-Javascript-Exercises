@@ -11,179 +11,457 @@
 <body>
   <script>
 
-// == PART ONE==========================================================================================================
+// PART ONE
+// ====================
+// 1. Variable
+// ====================
+// a) Declare variables to store your first name, last name,  marital status, country and age in multiple lines
+// _____________________________________________________________________________________________________________________
 
+let first_name = '';
+let last_name = '';
+let maritalStatus = '';
+let country = '';
+let age = 0;
+
+// _____________________________________________________________________________________________________________________
+// b) Declare variables to store your first name, last name,  marital status, country and age in a single line
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+// let first_name = '', last_name = '', maritalStatus = '', country = '', age = 0;
+
+// _____________________________________________________________________________________________________________________
+// c) Declare two variables myAge and yourAge and assign them initial values and log to browser console. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+// let yourAge = 31;
+// console.log(`I am ${myAge} years old. \nYou are ${yourAge} years old.`);
+
+
+// ====================
+// 2. Data types
+// ====================
+//    String, number, boolean, null, undefined and symbol(ES6) are JavaScript primitive data types.
+//    The JavaScript typeof operator uses to check different data types. 
+//    Check the data type of each variables from question number 1.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+// console.log(typeof first_name, typeof last_name, typeof maritalStatus, typeof age, typeof country);
+
+
+// ====================
 // 3. Strings
-// a) Declare a variable name company and assign it to an initial value “Integrify Academy”.
-// _______________________________________________________________________________________
-    var company = 'Integrify Academy';
+// ====================
+//    Declare a variable name company and assign it to an initial value “Integrify Academy”.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+let company = 'Integrify Academy';
      
-// _______________________________________________________________________________________
-// Print the string  on the browser console using console.log()
-// _______________________________________________________________________________________
+// _____________________________________________________________________________________________________________________
+// a) Print the string  on the browser console using console.log()
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-    console.log(company);
+console.log(company);
 
-// _______________________________________________________________________________________
-// Print the length of the string  on the browser console using console.log()
-// _______________________________________________________________________________________
+// _____________________________________________________________________________________________________________________
+// b) Print the length of the string  on the browser console using console.log()
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-//     console.log(company.length);
+// console.log(company.length);
 
-// _______________________________________________________________________________________
-// Change all the string to capital letters using toUpperCase() method
-// _______________________________________________________________________________________
+// _____________________________________________________________________________________________________________________
+// c) Change all the string to capital letters using toUpperCase() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-//     console.log(company.toUpperCase());
+// console.log(company.toUpperCase());
 
-// _______________________________________________________________________________________
-// Change all the string to small letters using toLowerCase() method
-// _______________________________________________________________________________________
+// _____________________________________________________________________________________________________________________
+// d) Change all the string to small letters using toLowerCase() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     console.log(company.toLowerCase()); 
+// console.log(company.toLowerCase()); 
 
-// _______________________________________________________________________________________
-// Cut(slice) out the first word of the string using slice, substr() or substring() method
-// _______________________________________________________________________________________
+// _____________________________________________________________________________________________________________________
+// e) Cut(slice) out the first word of the string using slice, substr() or substring() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     console.log(company.slice(0, 9));
-//     console.log(company.substring(1, 9));
-// _______________________________________________________________________________________
-// Check if the string contains a word Academy using includes() method
-// _______________________________________________________________________________________
+// console.log(company.slice(0, 9));
+// console.log(company.substring(1, 9));
 
-//     console.log(company.includes('Academy'));
+// _____________________________________________________________________________________________________________________
+// f) Check if the string contains a word Academy using includes() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// Split the string into array using split() method
-// _______________________________________________________________________________________
-//     var new1 = company.split('');
-//     console.log(new1);
-   
-// _______________________________________________________________________________________
-// Change Integrify Academy  to Microsoft Academy using replace() method.
-// _______________________________________________________________________________________
+// console.log(company.includes('Academy'));
 
-//     console.log(company.replace('Integrify', 'Microsoft'));
-//     console.log(company);
+// _____________________________________________________________________________________________________________________
+// g) Split the string into array using split() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// What is the index of A in ‘Integrify Academy’ string use charAt()
-// _______________________________________________________________________________________
+// let new1 = company.split('');
+// console.log(new1);
 
-//     console.log(company.charAt(2));
-//     console.log(company);
+// _____________________________________________________________________________________________________________________
+// h) Split the string Integrify Academy at the space using split() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// What is the character code of A in ‘Integrify Academy’ string using charCodeAt()
-// _______________________________________________________________________________________
+let splitCompany = company.split(' ', 9)
+console.log(splitCompany);
 
-//     console.log(company.charCodeAt(1));
+// _____________________________________________________________________________________________________________________
+// i) “Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon” split the string at the comma and change it to an array.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// Use indexOf to determine the position of  the first occurrence of e in Integrify Academy
-// _______________________________________________________________________________________
+let sentence = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+let splitSentence = sentence.split(' ')
+console.log(splitSentence);
 
-//     console.log(company.indexOf('A'));
+// _____________________________________________________________________________________________________________________
+// j) Change Integrify Academy  to Microsoft Academy using replace() method.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// Use lastIndexOf to determine the position of the last occurrence of e in Integrify Academy
-// _______________________________________________________________________________________
+// console.log(company.replace('Integrify', 'Microsoft'));
+// console.log(company);
 
-//   console.log(company.lastIndexOf('e'));
+// _____________________________________________________________________________________________________________________
+// k) What is the index of A in ‘Integrify Academy’ string use charAt()
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// Use trim() to remove if there is trailing whitespace at the beginning and the end of the 
-// _______________________________________________________________________________________
+// console.log(company.charAt(2));
+// console.log(company);
 
-//     company = ' Integrify Academy ';
-//     console.log(company.trim());
+// _____________________________________________________________________________________________________________________
+// l) What is the character code of A in ‘Integrify Academy’ string using charCodeAt()
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// Use startsWith() method with the string Integrify Academy make the result true
-// _______________________________________________________________________________________
+// console.log(company.charCodeAt(1));
 
-//    console.log(company.startsWith('I'));
+// _____________________________________________________________________________________________________________________
+// m) Use indexOf to determine the position of  the first occurrence of e in Integrify Academy
+/// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// Use endsWith() method with the string Integrify Academy make the result true
-// _______________________________________________________________________________________
+// console.log(company.indexOf('A'));
 
-//    console.log(company.endsWith('y'));
+// _____________________________________________________________________________________________________________________
+// n) Use lastIndexOf to determine the position of the last occurrence of e in Integrify Academy
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
-// Use  match() method to find all the a’s in Integrify Academy
-// _______________________________________________________________________________________
+// console.log(company.lastIndexOf('e'));
 
-//     console.log(company.match(/e*/gm));
+// _____________________________________________________________________________________________________________________
+// o) Use trim() to remove if there is trailing whitespace at the beginning and the end of a string “  Integrify Academy  ”. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     var myAge = 30;
-//     var yourAge = 31;
+// company = ' Integrify Academy ';
+// console.log(company.trim());
 
-//     console.log(`I am ${myAge} years old. \nYou are ${yourAge} years old.`);
+// _____________________________________________________________________________________________________________________
+// p) Use startsWith() method with the string Integrify Academy make the result true
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// _______________________________________________________________________________________
+// console.log(company.startsWith('I'));
+
+// _____________________________________________________________________________________________________________________
+// q) Use endsWith() method with the string Integrify Academy make the result true
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// console.log(company.endsWith('y'));
+
+// _____________________________________________________________________________________________________________________
+// r) Use  match() method to find all the a’s in Integrify Academy
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// console.log(company.match(/e*/gm));
+
+// var myAge = 30;
+// var yourAge = 31;
+
+// console.log(`I am ${myAge} years old. \nYou are ${yourAge} years old.`);
+
+// _____________________________________________________________________________________________________________________
+// s) Use concat() and merge ‘Integrify’ and ‘Academy’ to a single string, ‘Integrify Academy’
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+let one = 'Integrify';
+let two = ' Academy';
+console.log(one.concat(two));
+
+
+// ====================
+// 4. Boolean
+// ====================
+//    Boolean value is either true or false. 
+// a) Write three JavaScript statement which provide truthy value. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+4 === 4
+3 < 4
+5 > 1
+
+// _____________________________________________________________________________________________________________________
+// b) Write three JavaScript statement which provide falsy value.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+4 !== 4
+3 > 4
+5 < 1
+
+// ========================
+// 5. Arithmetic Operator
+// ========================
+//    JavaScript arithmetic operators are addition(+), subtraction(-), multiplication(*), division(/), modulus(%), 
+//    increment(++) and decrement(--). Using the above operands apply different JavaScript arithmetic operators.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+let operandOne = 4;
+let operandTwo = 3;
+
+console.log(operandOne + operandTwo);
+console.log(operandOne - operandTwo);
+console.log(operandOne * operandTwo);
+console.log(operandOne / operandTwo);
+console.log(operandOne % operandTwo);
+console.log(operandOne ++);
+console.log(operandOne --);
+
+// =========================
+// 6. Comparison Operators
+// =========================
+// 	  Boolean value is either true or false. Any comparison return a boolean either true or false. 
+//    Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+console.log(4 > 3);
+console.log(4 >= 3);
+console.log(4 < 3);
+console.log(4 <=3);
+console.log(4 == 4);
+console.log(4 !=4);
+console.log(4=='4');
+console.log(4!='4');
+console.log(4 =='4');
+console.log(4 === 4);
+console.log(4!==4);
+
+// =======================
+// 7. Logical Operators
+// =======================
+// &&, || and ! are JavaScript logical operators. 
+
+// 4 > 3 && 10 < 12
+// 4 > 3 && 10 > 12
+// 4 > 3 || 10 < 12
+// 4 > 3 || 10 > 12
+// !(4 > 3)
+// !(4 < 3)
+// !(false);
+// !(4 > 3 && 10 < 12)
+// !(4 > 3 && 10 > 12)
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+
+
+// ====================
 // 8. Conditional
-// 
-// a) Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive but if not         18 give feedback to wait for the years he supposed to wait for.
-// _______________________________________________________________________________________
+// ====================
+// a) Get user input using prompt(“Enter your age:”). If user is 18 or older , give feedback:You are old enough to drive
+//    but if not 18 give feedback to wait for the years he supposed to wait for.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-//   var userAge = prompt('Enter your age:');
+// var userAge = prompt('Enter your age:');
 
-//     if (userAge >= 18) {
-//        console.log('You are old enough to drive');
-//     } else {
-//      var yearsTo = 18 - userAge;
-//      console.log(`You are left with ${yearsTo} years to drive.`);
-//     }
+// if (userAge >= 18) {
+//   console.log('You are old enough to drive');
+// } else {
+//   var yearsTo = 18 - userAge;
+//   console.log(`You are left with ${yearsTo} years to drive.`);
+// }
 
-// _______________________________________________________________________________________
-// b) Compare the values of myAge and yourAge using if … else. Based on the comparison log to console who is older (me or you)Use        prompt(“Enter your age:”) to get the age as input.
+// _____________________________________________________________________________________________________________________
+// b) Compare the values of myAge and yourAge using if … else. Based on the comparison log to console who is older 
+//    (me or you) use prompt(“Enter your age:”) to get the age as input.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-//       // var yourAge1 = prompt('Enter your age:');
-//       // var myAge1 = 30;
+// var yourAge1 = prompt('Enter your age:');
+// var myAge1 = 30;
 
-      // if (yourAge1 > myAge1) {
-      //   var dif = yourAge1 - myAge1;
-      //   console.log(`You are ${dif} years older than me.`)
-      // } else if (yourAge1 == myAge1){
-      //   console.log('We are the same age');
-      // } else {
-      //   var dif = myAge1 - yourAge1
-      //   console.log(`I am ${dif} years older than you`);
-      // }
+// if (yourAge1 > myAge1) {
+//   var dif = yourAge1 - myAge1;
+//   console.log(`You are ${dif} years older than me.`)
+// } else if (yourAge1 == myAge1){
+//   console.log('We are the same age');
+// } else {
+//   var dif = myAge1 - yourAge1
+//   console.log(`I am ${dif} years older than you`);
+// }
 
-    // var itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
-    // console.log(itCompanies);
-    // console.log(itCompanies.length);
+// ====================
+// 9. Ternary Operator
+// ====================
+//    let a = 4;
+//    let b = 3;
+//    If a is greater than b return a is greater than b else a is less than b.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-//     for (company of itCompanies){
-//       console.log(company);
-//     }
+let a = 4;
+let b = 3;
 
-//     for (company of itCompanies){
-//       console.log(company.toUpperCase());
-//     }
+var greatherThan = (a > b) ? "a is greater than b" : "a is less than b";
 
-//     console.log(`${itCompanies[0]}, ${itCompanies[1]}, ${itCompanies[2]}, ${itCompanies[3]}, ${itCompanies[4]}, ${itCompanies[5]} and ${itCompanies[6]} are big companies.`);
+console.log(greatherThan);
 
-//     console.log(itCompanies.sort());
-//     console.log(itCompanies.reverse());
+// ====================
+// 10. Array 
+// ====================
+//     Declare an array  variable name itCompanies and assign initial values Facebook, Google, Microsoft, Apple, IBM,
+//     Oracle and  Amazon.
+// a) Print the array using console.log()
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     for (i = 0; i < itCompanies.length; i++) {
-//       console.log(itCompanies[i]);
-//     }
+var itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
+console.log(itCompanies);
 
-//     function printArray (array){
-//      console.log(array);
-//     };
+// _____________________________________________________________________________________________________________________
+// b) Print the number of companies in the array
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     printArray(itCompanies);
+// console.log(itCompanies.length);
 
-// 8. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array(dont’ use method).
- 
+// _____________________________________________________________________________________________________________________
+// c) Print out each company
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// for (company of itCompanies){
+//   console.log(company);
+// }
+
+// _____________________________________________________________________________________________________________________
+// d) Capitalize each company and print them out
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// for (company of itCompanies){
+//   console.log(company.toUpperCase());
+// }
+// _____________________________________________________________________________________________________________________
+// e) Print the array like this: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// console.log(`${itCompanies[0]}, ${itCompanies[1]}, ${itCompanies[2]}, ${itCompanies[3]}, ${itCompanies[4]}, ${itCompanies[5]} and ${itCompanies[6]} are big companies.`);
+
+// _____________________________________________________________________________________________________________________
+// f) Sort the array using sort() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// console.log(itCompanies.sort());
+
+// _____________________________________________________________________________________________________________________
+// g) Reverse the array using reverse() method
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// console.log(itCompanies.reverse());
+
+// ====================
+// 11. Loop
+// ====================
+// a) Iterate 0 to 10 using for loop, do the same using while and do while loop.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// for (let i = 0; i < 11; i++){
+//   console.log(i); 
+// }
+
+// let ab = 0;
+// while (ab < 11){
+//   console.log(ab);
+//   ab ++
+// }
+
+// let cd = 0;
+// do {
+//   console.log(cd);
+//   cd ++
+// } while (cd < 11);
+
+// _____________________________________________________________________________________________________________________
+// b) Iterate 10 to 0 using for loop, do the same using while and do while loop.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+for (let i = 10; i >= 0; i--){
+  console.log(i); 
+}
+
+let ab = 10;
+while (ab >= 0){
+  console.log(ab);
+  ab --
+}
+
+let cd = 10;
+do {
+  console.log(cd);
+  cd --
+} while (cd >= 0);
+
+// _____________________________________________________________________________________________________________________
+// c) Iterate the array in question number 10 using a for loop and print out the items.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    for (i = 0; i < itCompanies.length; i++) {
+      console.log(itCompanies[i]);
+    }
 
 
+// ====================
+// 12. Function
+// ====================
+// a) Declare a function fullName and it print out your full name.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function fullName4 (){
+  console.log('your full name'); 
+}
+fullName4();
+
+// _____________________________________________________________________________________________________________________
+// b) Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full name.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+first_name = 'Antonija'
+last_name = 'Surname'
+
+function fullName5 (firstN, lastN){
+  let full_name = firstN + ' ' + lastN
+  console.log(full_name); 
+}
+fullName5(first_name, last_name);
+
+// _____________________________________________________________________________________________________________________
+// c) Declare a function addNumbers and it takes two two parameters and it returns sum.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function addNumbers(num1, num2){
+  let sum = num1 + num2;
+  return sum
+}
+
+console.log(addNumbers(1,2));
+
+// _____________________________________________________________________________________________________________________
+// d) Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function printArray (array){
+  for (x of array){
+    console.log(x);    
+  }
+};
+
+printArray(itCompanies);
+
+// _____________________________________________________________________________________________________________________
+// e) Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array
+// (dont’ use method).
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // function reverseArray (array){
 //   var newArray = []; 
@@ -193,29 +471,25 @@
 //   return newArray
 // }
 
-
 // console.log(reverseArray(itCompanies));
 
-
-
-// 9. Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array. 
+// _____________________________________________________________________________________________________________________
+// f) Declare a function name capitalizeArray. It takes array as a parameter and it returns  the capitalized array. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // function capitalizeArray (array){
 //   for (item of array){
 //     var upper = item.toString().toUpperCase();
 //     array[array.indexOf(item)] = upper;
-
 //   }
-
 //   return array
 // }
 
 // console.log(capitalizeArray(itCompanies));
 
-
-
-// 10.  Declare a function name removeItem. It returns array after removing an item
-
+// _____________________________________________________________________________________________________________________
+// g) Declare a function name removeItem. It returns array after removing an item
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // function removeItem(array){
 //   array.pop();
@@ -224,7 +498,9 @@
 
 // console.log(removeItem(itCompanies));
 
-// //  Declare a function name addItem. It returns array after adding an item
+// _____________________________________________________________________________________________________________________
+// h) Declare a function name addItem. It returns array after adding an item
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // function addItem(array, item){
 //  array.push(item);
@@ -233,162 +509,187 @@
 
 // console.log(addItem(itCompanies, 7));
 
+// _____________________________________________________________________________________________________________________
+// i) Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     function sumOfEven(number){
-//       var sum = 0;
-//       for (i = 0; i < number; i++){
-//         if (i % 2 === 0) {
-//           sum += i;
-//         }
-//       }
-//       return sum
-//     };
+function sumOfNumbers(number) {
+  let resultx = 0;
+  for (let i = 0; i <= number; i++){
+    resultx += i
+  }
+  return resultx
+}
 
-//     console.log(sumOfEven(5));
+console.log(sumOfNumbers(5));
 
+// _____________________________________________________________________________________________________________________
+// j) Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that range.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     function evensAndOdds(number){
-//       var evens = 0;
-//       var odds = 0;
-//       for (i = 0; i < number; i++){
-//         if (i % 2 === 0) {
-//           evens += 1;
-//         } else {
-//           odds += 1;
-//         }
-//       }
-//       console.log(`The number of evens is ${evens} and odds ${odds}.`);
-//     }
+    function sumOfOdds(number){
+      let sum = 0;
+      for (i = 0; i <= number; i++){
+        if (i % 2 !== 0) {
+          sum += i;
+        }
+      }
+      return sum
+    };
 
-//     evensAndOdds(10);
+    console.log(sumOfOdds(3));
 
-// //RANDOM HEX COLOR GENERATOR EX.1
+// _____________________________________________________________________________________________________________________
+// k) Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that range.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-//     function randomHexaNumberGenerator (){
-//       var randomHex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+function sumOfEven(number){
+  let sum = 0;
+  for (i = 0; i <= number; i++){
+    if (i % 2 === 0) {
+    sum += i;
+    }
+  }
+   return sum
+ };
+
+console.log(sumOfEven(6));
+
+// _____________________________________________________________________________________________________________________
+// l) Declare a function name evensAndOdds. It takes a number parameter and it counts number of evens and odds in the number.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function evensAndOdds(number){
+  var evens = 0;
+  var odds = 0;
+  for (i = 1; i <= number; i++){
+    if (i % 2 === 0) {
+      evens += 1;
+    } else {
+      odds += 1;
+    }
+  }
+  console.log(`The number of evens is ${evens} and odds ${odds}.`);
+}
+
+evensAndOdds(10);
+
+// _____________________________________________________________________________________________________________________
+// m) Declare a function name randomHexaNumberGenerator. When this function is called it generates  a random hexadecimal
+//    number. The function return the hexadecimal number.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// function randomHexaNumberGenerator (){
+//   let randomHex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
      
-//       var hex = '#';
-//       for (i = 0; i < 7; i++){
-//         var randomNum = Math.floor(Math.random() * randomHex.length);
-//         hex += randomHex[randomNum];
-//       }
-//       return hex
-//     }
+//   let hex = '#';
+//   for (i = 0; i < 7; i++){
+//     let randomNum = Math.floor(Math.random() * randomHex.length);
+//     hex += randomHex[randomNum];
+//   }
+//   return hex
+// }
 
-//     console.log(randomHexaNumberGenerator());
+// console.log(randomHexaNumberGenerator());
 
-//RANDOM HEX COLOR GENERATOR EX.2
+//SOLUTION #2
 
-    // function randomHexaNumberGenerator1 (){
-    //   var random = Math.random().toString(16).slice(2,8);
-    //   var hex = `#${random}`;
-    //   return hex
-    // }
+// function randomHexaNumberGenerator1 (){
+//   let random = Math.random().toString(16).slice(2,8);
+//   let hex = `#${random}`;
+//   return hex
+// }
 
-    // console.log(randomHexaNumberGenerator1());
+// console.log(randomHexaNumberGenerator1());
 
 
-    // SOLUTION #2
+// SOLUTION #3
 
-    // function randomHexaNumberGenerator1 (){
-    //   var characters = '123456789abcdef'
+// function randomHexaNumberGenerator1 (){
+//   let characters = '123456789abcdef'
      
-    //   var hex = '#';
-    //   for (i = 0; i < 6; i++){
-    //     var random = Math.floor(Math.random() * 15);
-    //     console.log(random);
-    //     hex = hex.concat(characters.charAt(random));
-    //   }
+//   let hex = '#';
+//   for (i = 0; i < 6; i++){
+//     let random = Math.floor(Math.random() * 15);
+//     console.log(random);
+//     hex = hex.concat(characters.charAt(random));
+//   }
       
-    //   return hex
-    // }
+//   return hex
+// }
 
-    // console.log(randomHexaNumberGenerator1());
-       
-// // Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+// console.log(randomHexaNumberGenerator1());
 
-//       function userIdGenerator (){
-//       var random = Math.random().toString(16).slice(2,9);
-//       return random
-//       }
-//       console.log(userIdGenerator());
+// _____________________________________________________________________________________________________________________
+// n) Declare a function name userIdGenerator. When this function is called it generates seven character id. The 
+//    function returns the id.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// function userIdGenerator (){
+// var random = Math.random().toString(16).slice(2,9);
+// return random
+// }
+// console.log(userIdGenerator());
 
 // SOLUTION #2
 
-//    function userIdGenerator (){
-//       var characters = '123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+// function userIdGenerator (){
+//   var characters = '123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
      
-//       var id = '';
-//       for (i = 0; i < 7; i++){
-//         var random = Math.floor(Math.random() * 35);
-//         console.log(random);
-//         id = id.concat(characters.charAt(random));
-//       }
-      
-//       return id
-//     }
-
-//     console.log(userIdGenerator());
-
-// // Modify question number 11 . Declare a function name userIdGeneratedByUser. 
-// // It doesn’t take any parameter but it takes two inputs using prompt().
-// // One of the input is the number of characters and the second input is the number of ids which are supposed to be generated. 
- 
-//     // var numberOfChar = parseInt(prompt('How many characters do you want?'));
-//     // var numberOfId  = parseInt(prompt('How many id\'s do you want?'));
-
-
-//     function userIdGenerator(){
-  //     var ids = [];
-  //     for (i = 0; i < numberOfId; i++){
-  //      var randomID= Math.random().toString(16).slice(2, numberOfChar + 2);
-  //      ids[i]= randomID;
-  //     }
-  //     return ids
-//      }
-
- // console.log(userIdGenerator());
-
-// 14. Date Object
-// Write a function name displayDateTime  and it display in this format: 28/08/2018 04:08
-// Use the new Date() object to get month, date, year, hour and minute.
-
-// function numbersWithZero(number) {
-//     return String("000" + number).slice(-2);
+//   var id = '';
+//   for (i = 0; i < 7; i++){
+//     var random = Math.floor(Math.random() * 35);
+//     console.log(random);
+//     id = id.concat(characters.charAt(random));
+//   }    
+//   return id
 // }
 
-// function displayDateTime (){
-//  var date = new Date();
-//  var day = numbersWithZero(date.getDate());
-//  var month = numbersWithZero(date.getMonth() + 1);
-//  var year = date.getFullYear();
-//  var hour = numbersWithZero(date.getHours());
-//  var minutes = numbersWithZero(date.getMinutes());
+// console.log(userIdGenerator());
 
-//  return `${day}/${month}/${year} ${hour}:${minutes}`
+// _____________________________________________________________________________________________________________________
+// o) Modify question number n . Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it 
+//    takes two inputs using prompt(). One of the input is the number of characters and the second input is the number 
+//    of ids which are supposed to be generated. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// var numberOfChar = parseInt(prompt('How many characters do you want?'));
+// var numberOfId  = parseInt(prompt('How many id\'s do you want?'));
+
+// function userIdGenerator(){
+//   var ids = [];
+//   for (i = 0; i < numberOfId; i++){
+//     var randomID= Math.random().toString(16).slice(2, numberOfChar + 2);
+//     ids[i]= randomID;
+//   }
+//   return ids
 // }
 
-// console.log(displayDateTime());
+// console.log(userIdGenerator());
 
-// // Write a function name rgbColorGenerator and it generates rgb colors. '
-// // Integer between 0 and 255.
-
+// _____________________________________________________________________________________________________________________
+// p) Write a function name rgbColorGenerator and it generates rgb colors. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // function rgbColorGenerator(){
-  
 //   var rgbValue = [];
 //   for (i = 0; i < 3; i++){
-//     var threeNumbers = Math.floor(Math.random() * 256);
-//     rgbValue[i] = threeNumbers;
-//     console.log(rgbValue)
-//     }
-
+//   var threeNumbers = Math.floor(Math.random() * 256);
+//   rgbValue[i] = threeNumbers;
+//   console.log(rgbValue)
+//   }
 //   return `rgb(${rgbValue})`
 // }
 
 // console.log(rgbColorGenerator());
 
-// 20. Create an object literal called personAccount. It has firstName, lastName, income, expense properties and it has totalIncomes, totalExpenses, acountInfo,addIncome, addExpence and accountBalance methods.Income is a set of incomes and its description and the same for expense. 
+
+// ====================
+// 13. Object
+// ====================
+//  Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has                    totalIncomes, totalExpenses, acountInfo,addIncome, addExpence and accountBalance methods. Incomes is a set of incomes 
+//  and its description and the same for expenses. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // var personAccount = {
 //   firstName: 'David', 
@@ -431,17 +732,9 @@
 //   }
 // };
 
-
-
 // // personAccount.addIncome();
 // console.log(personAccount.income);
-
-// console.log('__________________________');
 // personAccount.accountInfo();
-// console.log('__________________________');
-
-
-
 // console.log(personAccount.totalExpense())
 // console.log(personAccount.accountBalance())
 // console.log(personAccount.totalIncome())
@@ -501,7 +794,6 @@ var personAccount = {
   }
 };
 
-
 // console.log(personAccount.totalIncome())
 // console.log(personAccount.totalExpense())
 // personAccount.addIncome();
@@ -511,12 +803,36 @@ console.log(personAccount.income.salary);
 // console.log(personAccount.accountBalance())
 
 
+// ====================
+// 14. Date Object
+// ====================
+//  Write a function name displayDateTime  and it display in this format: 28/08/2018 04:08
+//  Use the new Date() object to get month, date, year, hour and minute. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
+// function numbersWithZero(number) {
+//     return String("000" + number).slice(-2);
+// }
 
-// _______________________________________________________________________________________
+// function displayDateTime (){
+//  var date = new Date();
+//  var day = numbersWithZero(date.getDate());
+//  var month = numbersWithZero(date.getMonth() + 1);
+//  var year = date.getFullYear();
+//  var hour = numbersWithZero(date.getHours());
+//  var minutes = numbersWithZero(date.getMinutes());
+
+//  return `${day}/${month}/${year} ${hour}:${minutes}`
+// }
+
+// console.log(displayDateTime());
+
+// ========================
 // 15. Regular Expression
-//     Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per month, 10000 euro        annual bonus, 5500 euro online courses’
-// _______________________________________________________________________________________
+// ========================
+//     Calculate the total annual income of the person from the following text. ‘He earns 4000 euro from salary per
+//     month, 10000 euro annual bonus, 5500 euro online courses’
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // var paragraph = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses';
 // var regex = /[0-9]+/g;
@@ -533,15 +849,148 @@ console.log(personAccount.income.salary);
 
 // console.log(personAccount.totalIncome()) 
 
+// ============================
+// 16. Functional Programming
+// ============================
+// a) Declare a function called getStringLists which take array as a parameter and it returns array only with string items.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+let someArray = [1, 2, 3, 'bla'];
+
+function getStringLists (array){
+  let newArray = [];
+  for (let i = 0; i < array.length; i++){
+    newArray[i] = array[i].toString();
+  }
+  return newArray
+}
+
+console.log(getStringLists(someArray));
+
+// _____________________________________________________________________________________________________________________
+// b) Declare a function called categorizeCountries which returns array of countries that have some common pattern
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+const countries = ['Afghanistan',"Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+
+// let matchWord = /ia$/;
+// let matchWord = /al$/;
+// let matchWord = /[A*]/;
+// let matchWord = /land$/;
+
+// const categorizeCountries = countries.filter(function(val){
+//   return val.match(matchWord)
+// });
+
+// console.log(categorizeCountries);
+
+// _____________________________________________________________________________________________________________________
+// c) Declare a getFirstTenCountries function and return an array of ten countries
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// function getFirstTenCountries(array){
+//   let newArray2 = []
+//   for (let i = 0; i < 10; i++){
+//     newArray2[i] = array[i];
+//   }
+//   return newArray2;
+// }
+
+// SOLUTION #2
+
+function getFirstTenCountries (array){
+  return array.splice(0, 10)
+}
+
+console.log(getFirstTenCountries(countries));
+
+
+
+
+
+
+// console.log(getFirstTenCountries(countries));
+
+
+// _____________________________________________________________________________________________________________________
+// d) Declare a getLastTenCountries function and return an array of ten countries
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function getLastTenCountries(array){
+  array.reverse();
+  let newArray2 = []
+  for (let i = 0; i < 10; i++){
+    newArray2[i] = array[i];
+  }
+  return newArray2;
+}
+
+console.log(getLastTenCountries(countries));
+
+// _____________________________________________________________________________________________________________________
+// e) Find out with which letter are there many countries
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
+function sortCountriesByLettersAndTimes (){
+  let matchWords = [/^A/, /^B/, /^C/, /^D/, /^E/, /^F/, /^G/, /^H/, /^I/, /^J/, /^K/, /^L/, /^M/, /^N/, /^O/, /^P/, /^Q/, /^R/, /^S/, /^T/, /^U/, /^V/, /^W/, /^X/, /^Y/, /^Z/]
+  let resultObject = {};
+  for (i = 0; i < matchWords.length; i++){
+    let matchWord = matchWords[i];
+
+    const whatLetter = countries.filter(function(val){
+    return val.match(matchWord)});
+     
+   
+    resultObject[whatLetter.length] = whatLetter;
+       
+  }
+
+   // returns an object that contains the arrays of all same letter countries and the number of them
+  return resultObject
+}
+
+ // creates an object that contains the arrays of all same letter countries and the number of them
+let countriesByLetters = sortCountriesByLettersAndTimes();
+console.log(countriesByLetters);
+
+// creates an array of object keys - numbers of countries with the same letter in the name
+let allNumbers = Object.keys(countriesByLetters);
+console.log(allNumbers);
+
+// calculates which number of countries with the same name is the biggest
+let mostLetters = Math.max(...allNumbers)
+console.log(mostLetters);
+
+// gives us the countries that share the same letter the most times
+let finalResult = countriesByLetters[26]
+
+console.log(finalResult);
+
+
+// ========================
+// 17. Destructuring
+// ========================
+//     
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// ========================
+// 18. DOM
+// ========================
+//     
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
 
 
 
 // == PART TWO ==========================================================================================================
 
+// _____________________________________________________________________________________________________________________
 // 1. Print a seven digit two lottery rows for next weekend’s Lottery using console.log().
 //    No need to arrange numbers in ascending order. 
 //    Hint 1: Math.floor(Math.random()*9)+1 will return numbers between 1 .. 9
-// _______________________________________________________________________________________
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 
 // function lotteryGenerator(){
@@ -558,13 +1007,13 @@ console.log(personAccount.income.salary);
 
 // console.log(`${lotteryGenerator()}\n${lotteryGenerator()}`);
 
-// _______________________________________________________________________________________
+// _____________________________________________________________________________________________________________________
 // 2. Modify your lottery script: User will be prompted how many lottery rows they would like to have
 //    Create a function that returns a single row of numbers as a string
 //    Call your function as many times as needed and print the rows in console
 //    (This is your second version – still no need to check if there is same number twice, 
 //    no need to arrange numbers in ascending order)
-// _______________________________________________________________________________________
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // var numberOfRows = parseInt(prompt('How many rows do you want?'));
 
@@ -578,7 +1027,7 @@ console.log(personAccount.income.salary);
 
 // console.log(multipleLotteryGenerator(numberOfRows));
 
-// _______________________________________________________________________________________
+// _____________________________________________________________________________________________________________________
 // 3. Modify your lottery script to use arrays.
 //    Your function should:
 //    create an array
@@ -587,7 +1036,8 @@ console.log(personAccount.income.salary);
 //    return the array
 //    call function as many times as user asks
 //    print lottery rows to console
-// _______________________________________________________________________________________
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
 
 // var numberOfRows = parseInt(prompt('How many rows do you want?'));
 
@@ -603,20 +1053,9 @@ console.log(personAccount.income.salary);
 
 // multipleLotteryGenerator(numberOfRows);
 
-// _______________________________________________________________________________________
-// 9. Ternary Operator
-//    let a = 4;
-//    let b = 3;
-//    If a is greater than b return a is greater than b else a is less than b.
-// _______________________________________________________________________________________
 
-let a = 4;
-let b = 3;
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-var greatherThan = (a > b) ? "a is greater than b" : "a is less than b";
-
-console.log(greatherThan);
-// _______________________________________________________________________________________
   </script>
 </body>
 
