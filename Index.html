@@ -4,8 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Exercise 1</title>
+  <style>
+
+  * {
+      box-sizing: border-box;
+    }
+
+  .color-div {
+    border-radius: 5px;
+    width:700px;
+    height:110px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #595959;
+  }
+
+  .color-text {
+
+    height: 20px;
+    padding: 40px 10% ;
+    
+    
+  }
+  </style>
 </head>
 
 <body>
@@ -18,11 +42,11 @@
 // a) Declare variables to store your first name, last name,  marital status, country and age in multiple lines
 // _____________________________________________________________________________________________________________________
 
-let first_name = '';
-let last_name = '';
-let maritalStatus = '';
-let country = '';
-let age = 0;
+// let first_name = '';
+// let last_name = '';
+// let maritalStatus = '';
+// let country = '';
+// let age = 0;
 
 // _____________________________________________________________________________________________________________________
 // b) Declare variables to store your first name, last name,  marital status, country and age in a single line
@@ -55,13 +79,13 @@ let age = 0;
 //    Declare a variable name company and assign it to an initial value “Integrify Academy”.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-let company = 'Integrify Academy';
+// let company = 'Integrify Academy';
      
 // _____________________________________________________________________________________________________________________
 // a) Print the string  on the browser console using console.log()
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-console.log(company);
+// console.log(company);
 
 // _____________________________________________________________________________________________________________________
 // b) Print the length of the string  on the browser console using console.log()
@@ -105,16 +129,16 @@ console.log(company);
 // h) Split the string Integrify Academy at the space using split() method
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-let splitCompany = company.split(' ', 9)
-console.log(splitCompany);
+// let splitCompany = company.split(' ', 9)
+// console.log(splitCompany);
 
 // _____________________________________________________________________________________________________________________
 // i) “Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon” split the string at the comma and change it to an array.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-let sentence = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
-let splitSentence = sentence.split(' ')
-console.log(splitSentence);
+// let sentence = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+// let splitSentence = sentence.split(' ')
+// console.log(splitSentence);
 
 // _____________________________________________________________________________________________________________________
 // j) Change Integrify Academy  to Microsoft Academy using replace() method.
@@ -182,9 +206,9 @@ console.log(splitSentence);
 // s) Use concat() and merge ‘Integrify’ and ‘Academy’ to a single string, ‘Integrify Academy’
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-let one = 'Integrify';
-let two = ' Academy';
-console.log(one.concat(two));
+// let one = 'Integrify';
+// let two = ' Academy';
+// console.log(one.concat(two));
 
 
 // ====================
@@ -194,17 +218,17 @@ console.log(one.concat(two));
 // a) Write three JavaScript statement which provide truthy value. 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-4 === 4
-3 < 4
-5 > 1
+// 4 === 4
+// 3 < 4
+// 5 > 1
 
 // _____________________________________________________________________________________________________________________
 // b) Write three JavaScript statement which provide falsy value.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-4 !== 4
-3 > 4
-5 < 1
+// 4 !== 4
+// 3 > 4
+// 5 < 1
 
 // ========================
 // 5. Arithmetic Operator
@@ -213,16 +237,16 @@ console.log(one.concat(two));
 //    increment(++) and decrement(--). Using the above operands apply different JavaScript arithmetic operators.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-let operandOne = 4;
-let operandTwo = 3;
+// let operandOne = 4;
+// let operandTwo = 3;
 
-console.log(operandOne + operandTwo);
-console.log(operandOne - operandTwo);
-console.log(operandOne * operandTwo);
-console.log(operandOne / operandTwo);
-console.log(operandOne % operandTwo);
-console.log(operandOne ++);
-console.log(operandOne --);
+// console.log(operandOne + operandTwo);
+// console.log(operandOne - operandTwo);
+// console.log(operandOne * operandTwo);
+// console.log(operandOne / operandTwo);
+// console.log(operandOne % operandTwo);
+// console.log(operandOne ++);
+// console.log(operandOne --);
 
 // =========================
 // 6. Comparison Operators
@@ -231,17 +255,17 @@ console.log(operandOne --);
 //    Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-console.log(4 > 3);
-console.log(4 >= 3);
-console.log(4 < 3);
-console.log(4 <=3);
-console.log(4 == 4);
-console.log(4 !=4);
-console.log(4=='4');
-console.log(4!='4');
-console.log(4 =='4');
-console.log(4 === 4);
-console.log(4!==4);
+// console.log(4 > 3);
+// console.log(4 >= 3);
+// console.log(4 < 3);
+// console.log(4 <=3);
+// console.log(4 == 4);
+// console.log(4 !=4);
+// console.log(4=='4');
+// console.log(4!='4');
+// console.log(4 =='4');
+// console.log(4 === 4);
+// console.log(4!==4);
 
 // =======================
 // 7. Logical Operators
@@ -303,12 +327,12 @@ console.log(4!==4);
 //    If a is greater than b return a is greater than b else a is less than b.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-let a = 4;
-let b = 3;
+// let a = 4;
+// let b = 3;
 
-var greatherThan = (a > b) ? "a is greater than b" : "a is less than b";
+// var greatherThan = (a > b) ? "a is greater than b" : "a is less than b";
 
-console.log(greatherThan);
+// console.log(greatherThan);
 
 // ====================
 // 10. Array 
@@ -318,8 +342,8 @@ console.log(greatherThan);
 // a) Print the array using console.log()
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
-console.log(itCompanies);
+// var itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
+// console.log(itCompanies);
 
 // _____________________________________________________________________________________________________________________
 // b) Print the number of companies in the array
@@ -386,29 +410,29 @@ console.log(itCompanies);
 // b) Iterate 10 to 0 using for loop, do the same using while and do while loop.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-for (let i = 10; i >= 0; i--){
-  console.log(i); 
-}
+// for (let i = 10; i >= 0; i--){
+//   console.log(i); 
+// }
 
-let ab = 10;
-while (ab >= 0){
-  console.log(ab);
-  ab --
-}
+// let ab = 10;
+// while (ab >= 0){
+//   console.log(ab);
+//   ab --
+// }
 
-let cd = 10;
-do {
-  console.log(cd);
-  cd --
-} while (cd >= 0);
+// let cd = 10;
+// do {
+//   console.log(cd);
+//   cd --
+// } while (cd >= 0);
 
 // _____________________________________________________________________________________________________________________
 // c) Iterate the array in question number 10 using a for loop and print out the items.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-    for (i = 0; i < itCompanies.length; i++) {
-      console.log(itCompanies[i]);
-    }
+// for (i = 0; i < itCompanies.length; i++) {
+//   console.log(itCompanies[i]);
+// }
 
 
 // ====================
@@ -417,46 +441,46 @@ do {
 // a) Declare a function fullName and it print out your full name.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function fullName4 (){
-  console.log('your full name'); 
-}
-fullName4();
+// function fullName4 (){
+//   console.log('your full name'); 
+// }
+// fullName4();
 
 // _____________________________________________________________________________________________________________________
 // b) Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full name.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-first_name = 'Antonija'
-last_name = 'Surname'
+// first_name = 'Antonija'
+// last_name = 'Surname'
 
-function fullName5 (firstN, lastN){
-  let full_name = firstN + ' ' + lastN
-  console.log(full_name); 
-}
-fullName5(first_name, last_name);
+// function fullName5 (firstN, lastN){
+//   let full_name = firstN + ' ' + lastN
+//   console.log(full_name); 
+// }
+// fullName5(first_name, last_name);
 
 // _____________________________________________________________________________________________________________________
 // c) Declare a function addNumbers and it takes two two parameters and it returns sum.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function addNumbers(num1, num2){
-  let sum = num1 + num2;
-  return sum
-}
+// function addNumbers(num1, num2){
+//   let sum = num1 + num2;
+//   return sum
+// }
 
-console.log(addNumbers(1,2));
+// console.log(addNumbers(1,2));
 
 // _____________________________________________________________________________________________________________________
 // d) Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function printArray (array){
-  for (x of array){
-    console.log(x);    
-  }
-};
+// function printArray (array){
+//   for (x of array){
+//     console.log(x);    
+//   }
+// };
 
-printArray(itCompanies);
+// printArray(itCompanies);
 
 // _____________________________________________________________________________________________________________________
 // e) Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array
@@ -513,66 +537,66 @@ printArray(itCompanies);
 // i) Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function sumOfNumbers(number) {
-  let resultx = 0;
-  for (let i = 0; i <= number; i++){
-    resultx += i
-  }
-  return resultx
-}
+// function sumOfNumbers(number) {
+//   let resultx = 0;
+//   for (let i = 0; i <= number; i++){
+//     resultx += i
+//   }
+//   return resultx
+// }
 
-console.log(sumOfNumbers(5));
+// console.log(sumOfNumbers(5));
 
 // _____________________________________________________________________________________________________________________
 // j) Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that range.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-    function sumOfOdds(number){
-      let sum = 0;
-      for (i = 0; i <= number; i++){
-        if (i % 2 !== 0) {
-          sum += i;
-        }
-      }
-      return sum
-    };
+// function sumOfOdds(number){
+//   let sum = 0;
+//   for (i = 0; i <= number; i++){
+//     if (i % 2 !== 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum
+// };
 
-    console.log(sumOfOdds(3));
+// console.log(sumOfOdds(3));
 
 // _____________________________________________________________________________________________________________________
 // k) Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that range.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function sumOfEven(number){
-  let sum = 0;
-  for (i = 0; i <= number; i++){
-    if (i % 2 === 0) {
-    sum += i;
-    }
-  }
-   return sum
- };
+// function sumOfEven(number){
+//   let sum = 0;
+//   for (i = 0; i <= number; i++){
+//     if (i % 2 === 0) {
+//     sum += i;
+//     }
+//   }
+//    return sum
+//  };
 
-console.log(sumOfEven(6));
+// console.log(sumOfEven(6));
 
 // _____________________________________________________________________________________________________________________
 // l) Declare a function name evensAndOdds. It takes a number parameter and it counts number of evens and odds in the number.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function evensAndOdds(number){
-  var evens = 0;
-  var odds = 0;
-  for (i = 1; i <= number; i++){
-    if (i % 2 === 0) {
-      evens += 1;
-    } else {
-      odds += 1;
-    }
-  }
-  console.log(`The number of evens is ${evens} and odds ${odds}.`);
-}
+// function evensAndOdds(number){
+//   var evens = 0;
+//   var odds = 0;
+//   for (i = 1; i <= number; i++){
+//     if (i % 2 === 0) {
+//       evens += 1;
+//     } else {
+//       odds += 1;
+//     }
+//   }
+//   console.log(`The number of evens is ${evens} and odds ${odds}.`);
+// }
 
-evensAndOdds(10);
+// evensAndOdds(10);
 
 // _____________________________________________________________________________________________________________________
 // m) Declare a function name randomHexaNumberGenerator. When this function is called it generates  a random hexadecimal
@@ -741,65 +765,65 @@ evensAndOdds(10);
 
 // SOLUTION #2:
 
-var personAccount = {
-  firstName: 'David', 
-  lastName: 'Smith',
-  income: [{description: 'salary', amount: 4000}, {description: 'bonus', amount: 1000}, {description: 'online course', amount: 5500}],
-  expense: [{description: 'bills', amount: 50}, {description: 'food', amount: 10}, {description: 'travel', amount: 50}],
-  totalIncome: function(){
-    let amounts = this.income.map(function(item) {return item.amount})
-    let sum = 0;
-    for (let i = 0; i < amounts.length; i++){
-      sum += amounts[i]
-    }
-    return sum
-  },
-  totalExpense:  function(){
-    let amounts = this.expense.map(function(item) {return item.amount})
-    let sum = 0;
-    for (let i = 0; i < amounts.length; i++){
-      sum += amounts[i]
-    }
-    return sum
-  },
-  addIncome: function(){
-    let incomeKey = prompt('What is the income?').toString();
-    let incomeValue = parseInt(prompt('What is the amount of income?')); 
-    let newIncome = {};
-    newIncome.description = incomeKey;
-    newIncome.amount = incomeValue;
-    this.income.push(newIncome)
-  },
-  addExpense: function(){
-    let expenseKey = prompt('What is the expense?').toString();
-    let expenseValue = parseInt(prompt('What is the amount of the expense?'));
-    let newExpense = {};
-    newExpense.description = incomeKey;
-    newExpense.amount = incomeValue;
-    this.income.push(newExpense)
-  },
-  accountBalance: function(){
-    let balance = this.totalIncome() - this.totalExpense();
-    return balance
-  },
-  accountInfo: function(){
-    let incomeInfo = this.income.map(function(credit){
-      return `${credit.description}: ${credit.amount}`
-    })
-    let expenseInfo = this.expense.map(function(debit){
-      return `${debit.description}: ${debit.amount}`
-    })
+// var personAccount = {
+//   firstName: 'David', 
+//   lastName: 'Smith',
+//   income: [{description: 'salary', amount: 4000}, {description: 'bonus', amount: 1000}, {description: 'online course', amount: 5500}],
+//   expense: [{description: 'bills', amount: 50}, {description: 'food', amount: 10}, {description: 'travel', amount: 50}],
+//   totalIncome: function(){
+//     let amounts = this.income.map(function(item) {return item.amount})
+//     let sum = 0;
+//     for (let i = 0; i < amounts.length; i++){
+//       sum += amounts[i]
+//     }
+//     return sum
+//   },
+//   totalExpense:  function(){
+//     let amounts = this.expense.map(function(item) {return item.amount})
+//     let sum = 0;
+//     for (let i = 0; i < amounts.length; i++){
+//       sum += amounts[i]
+//     }
+//     return sum
+//   },
+//   addIncome: function(){
+//     let incomeKey = prompt('What is the income?').toString();
+//     let incomeValue = parseInt(prompt('What is the amount of income?')); 
+//     let newIncome = {};
+//     newIncome.description = incomeKey;
+//     newIncome.amount = incomeValue;
+//     this.income.push(newIncome)
+//   },
+//   addExpense: function(){
+//     let expenseKey = prompt('What is the expense?').toString();
+//     let expenseValue = parseInt(prompt('What is the amount of the expense?'));
+//     let newExpense = {};
+//     newExpense.description = incomeKey;
+//     newExpense.amount = incomeValue;
+//     this.income.push(newExpense)
+//   },
+//   accountBalance: function(){
+//     let balance = this.totalIncome() - this.totalExpense();
+//     return balance
+//   },
+//   accountInfo: function(){
+//     let incomeInfo = this.income.map(function(credit){
+//       return `${credit.description}: ${credit.amount}`
+//     })
+//     let expenseInfo = this.expense.map(function(debit){
+//       return `${debit.description}: ${debit.amount}`
+//     })
    
-   return (`${this.firstName}\n${this.lastName}\n\n${incomeInfo} TOTAL: ${this.totalIncome()}€\n\n${expenseInfo} TOTAL: ${this.totalExpense()}€\n\nBALANCE: ${this.accountBalance()}€ `);
-  }
-};
+//    return (`${this.firstName}\n${this.lastName}\n\n${incomeInfo} TOTAL: ${this.totalIncome()}€\n\n${expenseInfo} TOTAL: ${this.totalExpense()}€\n\nBALANCE: ${this.accountBalance()}€ `);
+//   }
+// };
 
 // console.log(personAccount.totalIncome())
 // console.log(personAccount.totalExpense())
 // personAccount.addIncome();
 // personAccount.addExpense();
-console.log(personAccount.accountInfo());
-console.log(personAccount.income.salary);
+// console.log(personAccount.accountInfo());
+// console.log(personAccount.income.salary);
 // console.log(personAccount.accountBalance())
 
 
@@ -852,26 +876,26 @@ console.log(personAccount.income.salary);
 // ============================
 // 16. Functional Programming
 // ============================
-// a) Declare a function called getStringLists which take array as a parameter and it returns array only with string items.
+// a) Declare a function called getStringLists which takes array as a parameter and it returns array only with string items.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-let someArray = [1, 2, 3, 'bla'];
+// let someArray = [1, 2, 3, 'bla'];
 
-function getStringLists (array){
-  let newArray = [];
-  for (let i = 0; i < array.length; i++){
-    newArray[i] = array[i].toString();
-  }
-  return newArray
-}
+// function getStringLists (array){
+//   let newArray = [];
+//   for (let i = 0; i < array.length; i++){
+//     newArray[i] = array[i].toString();
+//   }
+//   return newArray
+// }
 
-console.log(getStringLists(someArray));
+// console.log(getStringLists(someArray));
 
 // _____________________________________________________________________________________________________________________
 // b) Declare a function called categorizeCountries which returns array of countries that have some common pattern
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-const countries = ['Afghanistan',"Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+// const countries = ['Afghanistan',"Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
 
 // let matchWord = /ia$/;
 // let matchWord = /al$/;
@@ -898,81 +922,200 @@ const countries = ['Afghanistan',"Albania","Algeria","Andorra","Angola","Anguill
 
 // SOLUTION #2
 
-function getFirstTenCountries (array){
-  return array.splice(0, 10)
-}
-
-console.log(getFirstTenCountries(countries));
-
-
-
-
-
+// function getFirstTenCountries (array){
+//   return array.splice(0, 10)
+// }
 
 // console.log(getFirstTenCountries(countries));
-
 
 // _____________________________________________________________________________________________________________________
 // d) Declare a getLastTenCountries function and return an array of ten countries
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function getLastTenCountries(array){
-  array.reverse();
-  let newArray2 = []
-  for (let i = 0; i < 10; i++){
-    newArray2[i] = array[i];
-  }
-  return newArray2;
-}
+// function getLastTenCountries(array){
+//   array.reverse();
+//   let newArray2 = []
+//   for (let i = 0; i < 10; i++){
+//     newArray2[i] = array[i];
+//   }
+//   return newArray2;
+// }
 
-console.log(getLastTenCountries(countries));
+// console.log(getLastTenCountries(countries));
 
 // _____________________________________________________________________________________________________________________
 // e) Find out with which letter are there many countries
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
+// function sortByLettersAndTimes (array){
+//   let matchWords = [/^A/, /^B/, /^C/, /^D/, /^E/, /^F/, /^G/, /^H/, /^I/, /^J/, /^K/, /^L/, /^M/, /^N/, /^O/, /^P/, /^Q/, /^R/, /^S/, /^T/, /^U/, /^V/, /^W/, /^X/, /^Y/, /^Z/]
+//   let resultObject = {};
+//   for (i = 0; i < matchWords.length; i++){
+//     let matchWord = matchWords[i];
 
-
-function sortCountriesByLettersAndTimes (){
-  let matchWords = [/^A/, /^B/, /^C/, /^D/, /^E/, /^F/, /^G/, /^H/, /^I/, /^J/, /^K/, /^L/, /^M/, /^N/, /^O/, /^P/, /^Q/, /^R/, /^S/, /^T/, /^U/, /^V/, /^W/, /^X/, /^Y/, /^Z/]
-  let resultObject = {};
-  for (i = 0; i < matchWords.length; i++){
-    let matchWord = matchWords[i];
-
-    const whatLetter = countries.filter(function(val){
-    return val.match(matchWord)});
+//     const whatLetter = array.filter(function(val){
+//     return val.match(matchWord)});
      
-   
-    resultObject[whatLetter.length] = whatLetter;
-       
-  }
+//     resultObject[whatLetter.length] = whatLetter;   
+//   }
+//   //returns an object that contains the arrays of all same letter countries and the number of them
+//   return resultObject
+// }
 
-   // returns an object that contains the arrays of all same letter countries and the number of them
-  return resultObject
+//  //creates an object that contains the arrays of all same letter countries and the number of them
+// let countriesByLetters = sortByLettersAndTimes(countries);
+// console.log(countriesByLetters);
+
+// //creates an array of object keys - numbers of countries with the same letter in the name
+// let allNumbers = Object.keys(countriesByLetters);
+// console.log(allNumbers);
+
+// //calculates which number of countries with the same name is the biggest
+// let mostLetters = Math.max(...allNumbers)
+// console.log(mostLetters);
+
+// //gives us the countries that share the same letter the most times
+// let finalResult = countriesByLetters[mostLetters]
+
+// console.log(finalResult);
+
+//SOLUTION 2___________________
+
+// function mostFrequentFirstLetter (array){
+//   let matchWords = [/^A/, /^B/, /^C/, /^D/, /^E/, /^F/, /^G/, /^H/, /^I/, /^J/, /^K/, /^L/, /^M/, /^N/, /^O/, /^P/, /^Q/, /^R/, /^S/, /^T/, /^U/, /^V/, /^W/, /^X/, /^Y/, /^Z/]
+//   let resultObject = {};
+//   let allNumbers = [];
+//   for (i = 0; i < matchWords.length; i++){
+
+//     //selects the letter we want to filter by
+//     let matchWord = matchWords[i];
+
+//     //creates an array of countries with the same starting letter
+//     const whatLetter = array.filter(function(val){
+//     return val.match(matchWord)});
+
+//     //creates an object property - number of countries : array of countries
+//     allNumbers[i] = whatLetter.length
+//     resultObject[whatLetter.length] = whatLetter  
+//   }
+
+//    // returns the first letter of the first item in the array in the object property
+//   return resultObject[Math.max(...allNumbers)][0].slice(0,1)
+// }
+// console.log(mostFrequentFirstLetter(countries));
+
+
+// KIET'S SOLUTION:
+
+// function printCount(obj) {
+//   Object.entries(obj).forEach( ([key, value]) => console.log(`The array has ${value} countries start with ${key}`) );
+// }
+
+// function startCharOfAllContries(arr) {
+//   let object = {};
+
+//   let arrayOfCharracters = arr.map(curr => curr.charAt(0));
+  
+//   arrayOfCharracters.forEach(  letter => {object[letter] = (object[letter] || 0) + 1}  ); //if it is 0 or exists add 1
+  
+//   printCount(object);
+// }
+
+// startCharOfAllContries(countries);
+
+// ========================
+// 17. DOM
+// ========================
+// Develop a hexadecimal number generator application which looks like the figure below. 
+// a) Divide your codes into reusable functions.
+// I. First create a JavaScript function which generate hexadecimal number.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function randomHexaNumberGenerator1 (){
+  let characters = '123456789abcdef'
+     
+  let hex = '#';
+  for (i = 0; i < 6; i++){
+    let random = Math.floor(Math.random() * 15);
+    console.log(random);
+    hex = hex.concat(characters.charAt(random));
+  }
+      
+  return hex
 }
 
- // creates an object that contains the arrays of all same letter countries and the number of them
-let countriesByLetters = sortCountriesByLettersAndTimes();
-console.log(countriesByLetters);
+console.log(randomHexaNumberGenerator1());
 
-// creates an array of object keys - numbers of countries with the same letter in the name
-let allNumbers = Object.keys(countriesByLetters);
-console.log(allNumbers);
+// _____________________________________________________________________________________________________________________
+// II. Then create a function which creates HTML elements on the DOM.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// calculates which number of countries with the same name is the biggest
-let mostLetters = Math.max(...allNumbers)
-console.log(mostLetters);
-
-// gives us the countries that share the same letter the most times
-let finalResult = countriesByLetters[26]
-
-console.log(finalResult);
+function createHTML (){
+  let newElement = document.createElement('div');
+  document.body.appendChild(newElement);
+  return newElement
+}
 
 
-// ========================
-// 17. Destructuring
-// ========================
-//     
+
+// _____________________________________________________________________________________________________________________
+// III. Use the hexadecimal number returned in the first function to other functions and change the background of the
+//      divs and display hexadecimal color inside the div. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function createColorDiv (){
+  let element = createHTML();
+  let hexValue = randomHexaNumberGenerator1();
+  let text = createHTML();
+  element.appendChild(text);
+  element.className = 'color-div'
+  text.textContent = hexValue;
+  text.className = 'color-text';
+  element.style.backgroundColor = hexValue;
+ 
+}
+
+// console.log(createColorDiv());
+
+
+// _____________________________________________________________________________________________________________________
+// IV. Set a time interval to make generate all the time, and duration is 3s(3000). 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+var intervalID = window.setInterval(createColorDiv, 3000);
+
+// _____________________________________________________________________________________________________________________
+// V. Add event listener on mouse is in or over the divs and stop the setInterval time and a feature to copy the 
+//    hexadecimal color. 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function stopIntervalAndCopy (){
+  window.clearInterval(intervalID)
+  
+  let divs = document.querySelectorAll('.color-div')
+  divs.forEach(div => {
+    let button = document.createElement('span');
+    div.appendChild(button);
+    button.textContent = 'Copy';
+  })
+  
+}
+
+ let divs = document.querySelectorAll('.color.div');
+ 
+ divs.forEach((div) => {addEventListener( 'mouseover', stopIntervalAndCopy())});
+
+// _____________________________________________________________________________________________________________________
+// VI. When you finish deploy it on surge (url :firstnamefamilyname-hexacolor.surge) and send the link to codeabit. 
+//     Eg: abdiali-hexacolor.surge 
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// _____________________________________________________________________________________________________________________
+// b) CSS: div{ width:700px;height:110px;font-family: Montserrat;} . Use Google fonts link to access Monserrat font-family.
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+
+
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // ========================
@@ -1055,6 +1198,30 @@ console.log(finalResult);
 
 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+  console.log( Math.random()); // gives you nuber 0-0.99
+ 
+  console.log(Math.random() * 5); // gives you nuber 0-4.99
+  
+  console.log(Math.floor(Math.random() * 5)); // gives you number 0-4
+
+  console.log(Math.floor(Math.random() * 5) + 1); // gives you 1-5
+
+  console.log(Math.floor(Math.random() * 5) + 2); // gives you 2-6  -> when you add lower it increases both the upper and lower result so you need to subtract it from the upper
+
+ console.log(Math.floor(Math.random() * ( 5-2 )) + 2); // gives you 2-4
+
+  console.log( Math.floor(Math.random() * (5 -2 + 1) + 2 )); // gives you 2-5  
+  
+
+let newElement = document.createElement('div')
+console.log(newElement)
+
+
+  // Math.floor(Math.random() * (upper - lower + 1) ) + lower;
+
+
+
 
   </script>
 </body>
