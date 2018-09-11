@@ -13,6 +13,29 @@
       box-sizing: border-box;
     }
 
+  body {
+    width: fit-content;
+    margin: auto;
+  }
+
+  #inputField {
+    width: 70%;
+    height: 1.5rem;
+  }
+
+  header {
+    border-radius: 5px;
+    width:700px;
+    height:110px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: blueviolet;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 35px 60px;
+  }
+
   .color-div {
     border-radius: 5px;
     width:700px;
@@ -20,6 +43,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #595959;
+    position: relative;
   }
 
   .color-text {
@@ -27,12 +51,31 @@
     height: 20px;
     padding: 40px 10% ;
     
+  }
+
+  .copy-button {
+    position: absolute;
+    top: 35%;
+    left: 80%;
+    background-color: beige;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
     
   }
   </style>
 </head>
 
 <body>
+  <header>
+    <input type="text" id="inputField">
+    <input type="submit" value="Generate" id="generateButton">
+    <input type="submit" value="Stop">
+  </header>
+  <main>
+
+  </main>
   <script>
 
 // PART ONE
@@ -1037,7 +1080,6 @@ function randomHexaNumberGenerator1 (){
   let hex = '#';
   for (i = 0; i < 6; i++){
     let random = Math.floor(Math.random() * 15);
-    console.log(random);
     hex = hex.concat(characters.charAt(random));
   }
       
@@ -1050,18 +1092,56 @@ console.log(randomHexaNumberGenerator1());
 // II. Then create a function which creates HTML elements on the DOM.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
+let main = document.querySelector('main');
+
 function createHTML (){
   let newElement = document.createElement('div');
-  document.body.appendChild(newElement);
+  main.appendChild(newElement);
   return newElement
 }
-
-
 
 // _____________________________________________________________________________________________________________________
 // III. Use the hexadecimal number returned in the first function to other functions and change the background of the
 //      divs and display hexadecimal color inside the div. 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+// gets number or colors the user wants
+
+
+function numberOfColors(){
+  let numberOfGenColors;
+  let inputElem = document.querySelector('#inputField');
+  let inputValue = inputElem.value;
+    if(inputValue){
+      numberOfGenColors = inputValue;
+    }
+    return numberOfGenColors
+};
+
+//event listener for button
+let generateButton= document.querySelector('#generateButton')
+generateButton.addEventListener('click', generateMultiple);
+
+//copy button
+function stopIntervalAndCopy (){
+  //window.clearInterval(intervalID)
+  let buttons = document.querySelectorAll('.copy-button')
+  buttons.forEach((button) => {
+    button.style.visibility = 'visible';
+  })
+}
+
+function mouseOut (){
+ let buttons = document.querySelectorAll('.copy-button')
+  buttons.forEach((button) => {
+    button.style.visibility = 'hidden';
+  })
+}
+
+function copyToClipboard (){
+  //
+
+}
 
 function createColorDiv (){
   let element = createHTML();
@@ -1070,9 +1150,27 @@ function createColorDiv (){
   element.appendChild(text);
   element.className = 'color-div'
   text.textContent = hexValue;
+  text.id = hexValue;
   text.className = 'color-text';
   element.style.backgroundColor = hexValue;
- 
+  let button = document.createElement('input');
+  element.appendChild(button);
+  button.setAttribute('type','submit');
+  button.setAttribute('value','Copy');
+  button.setAttribute('onclick','copyToClipboard()');
+  button.className = 'copy-button'; 
+  button.style.visibility = 'hidden';
+  element.addEventListener('mouseover', stopIntervalAndCopy);
+  element.addEventListener('mouseout', mouseOut);
+  button.addEventListener('click', copyToClipboard )
+}
+
+//generates color divs the specified number of times
+function generateMultiple (){
+  main.innerHTML = '';
+  for (let i = 0; i < numberOfColors(); i++){
+    createColorDiv();
+  }
 }
 
 // console.log(createColorDiv());
@@ -1081,29 +1179,19 @@ function createColorDiv (){
 // _____________________________________________________________________________________________________________________
 // IV. Set a time interval to make generate all the time, and duration is 3s(3000). 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+// function getColors (){
+//   var intervalID = window.setInterval(generateMultiple, 3000);
+//   }
 
-var intervalID = window.setInterval(createColorDiv, 3000);
-
+// window.onload = function(){
+//     if(document.querySelectorAll('.color-div').length > numberOfColors()){
+//     window.clearInterval(intervalID)
+//     } }
 // _____________________________________________________________________________________________________________________
 // V. Add event listener on mouse is in or over the divs and stop the setInterval time and a feature to copy the 
 //    hexadecimal color. 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-function stopIntervalAndCopy (){
-  window.clearInterval(intervalID)
-  
-  let divs = document.querySelectorAll('.color-div')
-  divs.forEach(div => {
-    let button = document.createElement('span');
-    div.appendChild(button);
-    button.textContent = 'Copy';
-  })
-  
-}
-
- let divs = document.querySelectorAll('.color.div');
- 
- divs.forEach((div) => {addEventListener( 'mouseover', stopIntervalAndCopy())});
 
 // _____________________________________________________________________________________________________________________
 // VI. When you finish deploy it on surge (url :firstnamefamilyname-hexacolor.surge) and send the link to codeabit. 
@@ -1198,28 +1286,6 @@ function stopIntervalAndCopy (){
 
 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-  console.log( Math.random()); // gives you nuber 0-0.99
- 
-  console.log(Math.random() * 5); // gives you nuber 0-4.99
-  
-  console.log(Math.floor(Math.random() * 5)); // gives you number 0-4
-
-  console.log(Math.floor(Math.random() * 5) + 1); // gives you 1-5
-
-  console.log(Math.floor(Math.random() * 5) + 2); // gives you 2-6  -> when you add lower it increases both the upper and lower result so you need to subtract it from the upper
-
- console.log(Math.floor(Math.random() * ( 5-2 )) + 2); // gives you 2-4
-
-  console.log( Math.floor(Math.random() * (5 -2 + 1) + 2 )); // gives you 2-5  
-  
-
-let newElement = document.createElement('div')
-console.log(newElement)
-
-
-  // Math.floor(Math.random() * (upper - lower + 1) ) + lower;
-
 
 
 
