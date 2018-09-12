@@ -8,6 +8,37 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Exercise 1</title>
   <style>
+    body {
+     background-color: lightgray;
+      
+    }
+
+    main {
+      width: 80%;
+      margin: auto;
+      background-color: white;
+    }
+  
+    .country{
+      margin:  10px auto;
+      border-radius: 5px;
+      width: 90%;;
+      height:110px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: #595959;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: space-around;
+    }
+
+    .country-text {
+      text-align: center;
+    }
+  </style>
+  <!-- //style for hexanumber generator
+    <style>
 
   * {
       box-sizing: border-box;
@@ -64,15 +95,15 @@
     border-radius: 5px;
     
   }
-  </style>
+  </style> -->
 </head>
 
 <body>
-  <header>
+  <!-- <header>
     <input type="text" id="inputField">
     <input type="submit" value="Generate" id="generateButton">
-    <input type="submit" value="Stop">
-  </header>
+    <input type="submit" value="Stop" id="stopButton">
+  </header> -->
   <main>
 
   </main>
@@ -938,7 +969,7 @@
 // b) Declare a function called categorizeCountries which returns array of countries that have some common pattern
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// const countries = ['Afghanistan',"Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
+ const countries = ['Afghanistan',"Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre &amp; Miquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts &amp; Nevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad &amp; Tobago","Tunisia","Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
 
 // let matchWord = /ia$/;
 // let matchWord = /al$/;
@@ -1106,74 +1137,111 @@ function createHTML (){
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
 // gets number or colors the user wants
+// var intervalID;
+
+// function numberOfColors(){
+//   let numberOfGenColors;
+//   let inputElem = document.querySelector('#inputField');
+//   let inputValue = inputElem.value;
+//     if(inputValue){
+//       numberOfGenColors = inputValue;
+//     }
+//     return numberOfGenColors
+// };
+
+// //event listener for button
+// let generateButton= document.querySelector('#generateButton')
+// generateButton.addEventListener('click', startInterval);
 
 
-function numberOfColors(){
-  let numberOfGenColors;
-  let inputElem = document.querySelector('#inputField');
-  let inputValue = inputElem.value;
-    if(inputValue){
-      numberOfGenColors = inputValue;
-    }
-    return numberOfGenColors
-};
-
-//event listener for button
-let generateButton= document.querySelector('#generateButton')
-generateButton.addEventListener('click', generateMultiple);
 
 //copy button
-function stopIntervalAndCopy (){
-  //window.clearInterval(intervalID)
-  let buttons = document.querySelectorAll('.copy-button')
-  buttons.forEach((button) => {
-    button.style.visibility = 'visible';
-  })
-}
+// function stopIntervalAndCopy (){
+//   window.clearInterval(intervalID)
+//   let buttons = document.querySelectorAll('.copy-button')
+//   buttons.forEach((button) => {
+//     button.style.visibility = 'visible';
+//   })
+// }
 
-function mouseOut (){
- let buttons = document.querySelectorAll('.copy-button')
-  buttons.forEach((button) => {
-    button.style.visibility = 'hidden';
-  })
-}
+// function mouseOut (){
+//  let buttons = document.querySelectorAll('.copy-button')
+//   buttons.forEach((button) => {
+//     button.style.visibility = 'hidden';
+//   })
+// }
 
-function copyToClipboard (){
-  //
+// function copyToClipboard (str){
+//   function listener(click) {
+//     click.clipboardData.setData("text/plain", str);
+//     click.preventDefault();
+//   }
+//   document.addEventListener("copy", listener);
+//   document.execCommand("copy");
+// }
 
-}
+// const copyToClipboard = str => {
+//   const el = document.createElement('textarea');  // Create a <textarea> element
+//   el.value = str;                                 // Set its value to the string that you want copied
+//   el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
+//   el.style.position = 'absolute';                 
+//   el.style.left = '-9999px';                      // Move outside the screen to make it invisible
+//   document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
+//   const selected =            
+//     document.getSelection().rangeCount > 0        // Check if there is any content selected previously
+//       ? document.getSelection().getRangeAt(0)     // Store selection if found
+//       : false;                                    // Mark as false to know no selection existed before
+//   el.select();                                    // Select the <textarea> content
+//   document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
+//   document.body.removeChild(el);                  // Remove the <textarea> element
+//   if (selected) {                                 // If a selection existed before copying
+//     document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
+//     document.getSelection().addRange(selected);   // Restore the original selection
+//   }
+// };
 
-function createColorDiv (){
-  let element = createHTML();
-  let hexValue = randomHexaNumberGenerator1();
-  let text = createHTML();
-  element.appendChild(text);
-  element.className = 'color-div'
-  text.textContent = hexValue;
-  text.id = hexValue;
-  text.className = 'color-text';
-  element.style.backgroundColor = hexValue;
-  let button = document.createElement('input');
-  element.appendChild(button);
-  button.setAttribute('type','submit');
-  button.setAttribute('value','Copy');
-  button.setAttribute('onclick','copyToClipboard()');
-  button.className = 'copy-button'; 
-  button.style.visibility = 'hidden';
-  element.addEventListener('mouseover', stopIntervalAndCopy);
-  element.addEventListener('mouseout', mouseOut);
-  button.addEventListener('click', copyToClipboard )
-}
 
-//generates color divs the specified number of times
-function generateMultiple (){
-  main.innerHTML = '';
-  for (let i = 0; i < numberOfColors(); i++){
-    createColorDiv();
-  }
-}
+// function createColorDiv (){
+//   let element = createHTML();
+//   let hexValue = randomHexaNumberGenerator1();
+//   let text = createHTML();
+//   element.appendChild(text);
+//   element.className = 'color-div'
+//   text.textContent = hexValue;
+//   text.id = hexValue;
+//   text.className = 'color-text';
+//   element.style.backgroundColor = hexValue;
+//   let button = document.createElement('input');
+//   element.appendChild(button);
+//   button.setAttribute('type','submit');
+//   button.setAttribute('value','Copy');
+//   button.setAttribute('onclick','copyToClipboard()');
+//   button.className = 'copy-button'; 
+//   button.style.visibility = 'hidden';
+//   element.addEventListener('mouseover', stopIntervalAndCopy);
+//   element.addEventListener('mouseout', mouseOut);
+//   button.addEventListener('click', copyToClipboard)
+// }
+ 
 
-// console.log(createColorDiv());
+// function startInterval (){
+//   intervalID = window.setInterval(generateMultiple, 2000);
+//   console.log("id",intervalID);
+// }
+
+// //generates color divs the specified number of times
+// function generateMultiple (){
+//   main.innerHTML = '';
+//   for (let i = 0; i < numberOfColors(); i++){
+//     createColorDiv();
+//   }
+// }
+// function stopInterval(){
+//     window.clearInterval(intervalID);
+//     console.log("id-stop",intervalID);
+// } 
+// let stopButton= document.querySelector('#stopButton')
+// stopButton.addEventListener('click', stopInterval);
 
 
 // _____________________________________________________________________________________________________________________
@@ -1183,10 +1251,7 @@ function generateMultiple (){
 //   var intervalID = window.setInterval(generateMultiple, 3000);
 //   }
 
-// window.onload = function(){
-//     if(document.querySelectorAll('.color-div').length > numberOfColors()){
-//     window.clearInterval(intervalID)
-//     } }
+
 // _____________________________________________________________________________________________________________________
 // V. Add event listener on mouse is in or over the divs and stop the setInterval time and a feature to copy the 
 //    hexadecimal color. 
@@ -1202,7 +1267,27 @@ function generateMultiple (){
 // b) CSS: div{ width:700px;height:110px;font-family: Montserrat;} . Use Google fonts link to access Monserrat font-family.
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
+// _____________________________________________________________________________________________________________________
+// c) Make search for countries array that filters by any word or starting word and displays countries in colored squares
+// _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
+for (country of countries){
+  let country1 = country.toUpperCase()
+  createCountryDiv(country1);
+}
+
+function createCountryDiv (country){
+  let element = createHTML();
+  let hexValue = randomHexaNumberGenerator1();
+  let text = createHTML();
+  element.appendChild(text);
+  element.className = 'country';
+  text.textContent = country;
+  text.className = 'country-text';
+  element.style.backgroundColor = hexValue;
+}
+
+createCountryDiv();
 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
