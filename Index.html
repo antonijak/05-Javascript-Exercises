@@ -7,95 +7,72 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Exercise 1</title>
-  <style>
-    body {
-     background-color: lightgray;
-      
-    }
 
-    main {
-      width: 80%;
-      margin: auto;
-      background-color: white;
-    }
   
-    .country{
-      margin:  10px auto;
-      border-radius: 5px;
-      width: 90%;;
-      height:110px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
-      color: #595959;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: space-around;
-    }
-
-    .country-text {
-      text-align: center;
-    }
-  </style>
-  <!-- //style for hexanumber generator
     <style>
+* {
+  box-sizing: border-box;
+}
 
-  * {
-      box-sizing: border-box;
-    }
+body {
+width: fit-content;
+margin: auto;
+}
 
-  body {
-    width: fit-content;
-    margin: auto;
-  }
+#inputField {
+width: 70%;
+height: 1.5rem;
+}
 
-  #inputField {
-    width: 70%;
-    height: 1.5rem;
-  }
+#hidden-input {
+position: absolute;
+left: -10000000px;
 
-  header {
-    border-radius: 5px;
-    width:700px;
-    height:110px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    background-color: blueviolet;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 35px 60px;
-  }
+}
 
-  .color-div {
-    border-radius: 5px;
-    width:700px;
-    height:110px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    color: #595959;
-    position: relative;
-  }
+header {
+border-radius: 5px;
+width:700px;
+height:110px;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+background-color: blueviolet;
+margin-bottom: 1rem;
+display: flex;
+justify-content: space-around;
+padding: 35px 60px;
+}
 
-  .color-text {
+.color-div {
+border-radius: 5px;
+width:700px;
+height:110px;
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+color: #595959;
+position: relative;
+}
 
-    height: 20px;
-    padding: 40px 10% ;
-    
-  }
+.color-text {
 
-  .copy-button {
-    position: absolute;
-    top: 35%;
-    left: 80%;
-    background-color: beige;
-    padding: 7px;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 5px;
-    
-  }
-  </style> -->
+height: 20px;
+padding: 40px 10% ;
+
+}
+
+.copy-button {
+position: absolute;
+top: 35%;
+left: 80%;
+background-color: beige;
+padding: 7px;
+font-weight: bold;
+font-size: 14px;
+border-radius: 5px;
+
+}
+  
+  </style>
 </head>
 
 <body>
@@ -104,6 +81,7 @@
     <input type="submit" value="Generate" id="generateButton">
     <input type="submit" value="Stop" id="stopButton">
   </header> -->
+
   <main>
 
   </main>
@@ -1149,13 +1127,13 @@ function createHTML (){
 //     return numberOfGenColors
 // };
 
-// //event listener for button
+// //event listener for button START
 // let generateButton= document.querySelector('#generateButton')
 // generateButton.addEventListener('click', startInterval);
 
 
 
-//copy button
+// //copy button
 // function stopIntervalAndCopy (){
 //   window.clearInterval(intervalID)
 //   let buttons = document.querySelectorAll('.copy-button')
@@ -1171,36 +1149,6 @@ function createHTML (){
 //   })
 // }
 
-// function copyToClipboard (str){
-//   function listener(click) {
-//     click.clipboardData.setData("text/plain", str);
-//     click.preventDefault();
-//   }
-//   document.addEventListener("copy", listener);
-//   document.execCommand("copy");
-// }
-
-// const copyToClipboard = str => {
-//   const el = document.createElement('textarea');  // Create a <textarea> element
-//   el.value = str;                                 // Set its value to the string that you want copied
-//   el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
-//   el.style.position = 'absolute';                 
-//   el.style.left = '-9999px';                      // Move outside the screen to make it invisible
-//   document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
-//   const selected =            
-//     document.getSelection().rangeCount > 0        // Check if there is any content selected previously
-//       ? document.getSelection().getRangeAt(0)     // Store selection if found
-//       : false;                                    // Mark as false to know no selection existed before
-//   el.select();                                    // Select the <textarea> content
-//   document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
-//   document.body.removeChild(el);                  // Remove the <textarea> element
-//   if (selected) {                                 // If a selection existed before copying
-//     document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
-//     document.getSelection().addRange(selected);   // Restore the original selection
-//   }
-// };
-
-
 // function createColorDiv (){
 //   let element = createHTML();
 //   let hexValue = randomHexaNumberGenerator1();
@@ -1215,12 +1163,23 @@ function createHTML (){
 //   element.appendChild(button);
 //   button.setAttribute('type','submit');
 //   button.setAttribute('value','Copy');
-//   button.setAttribute('onclick','copyToClipboard()');
 //   button.className = 'copy-button'; 
 //   button.style.visibility = 'hidden';
 //   element.addEventListener('mouseover', stopIntervalAndCopy);
 //   element.addEventListener('mouseout', mouseOut);
-//   button.addEventListener('click', copyToClipboard)
+  
+//   let input = document.createElement('input');
+//   element.appendChild(input);
+//   input.value = hexValue;
+//   input.id = 'hidden-input';
+
+//   function copyToClipboard (){
+//     input.focus();
+//     input.setSelectionRange(0, 9999);
+//     document.execCommand('copy');
+//   }
+
+//   button.addEventListener('click', copyToClipboard);  
 // }
  
 
@@ -1271,23 +1230,52 @@ function createHTML (){
 // c) Make search for countries array that filters by any word or starting word and displays countries in colored squares
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-for (country of countries){
-  let country1 = country.toUpperCase()
-  createCountryDiv(country1);
-}
+// let matchWord = document.querySelector('#search').value;
+// console.log(matchWord);
 
-function createCountryDiv (country){
-  let element = createHTML();
-  let hexValue = randomHexaNumberGenerator1();
-  let text = createHTML();
-  element.appendChild(text);
-  element.className = 'country';
-  text.textContent = country;
-  text.className = 'country-text';
-  element.style.backgroundColor = hexValue;
-}
+// function createCountryDiv (country){
+//   let element = createHTML();
+//   let hexValue = randomHexaNumberGenerator1();
+//   let text = createHTML();
+//   element.appendChild(text);
+//   element.className = 'country';
+//   text.textContent = country;
+//   text.style.color = randomHexaNumberGenerator1();
+//   text.className = 'country-text';
+//   element.style.backgroundColor = hexValue;
+// }
 
-createCountryDiv();
+
+// function createCountry (){
+//   console.log(matchWord);
+  
+//   let resultObject = {};
+//   const whatLetter = countries.filter(function(val){return val.includes(matchWord)}); 
+//   let key = whatLetter.length  
+//   resultObject[key] = whatLetter; 
+//   for (country of resultObject[key]){
+//   let country1 = country.toUpperCase()
+//   createCountryDiv(country1);
+//   }
+// }
+
+
+// // if (matchWord){
+//   const searchAny = document.querySelector('#starting-word');
+//   searchAny.addEventListener('click',createCountry)
+// } else {
+//   for (country of countries){
+//   let country1 = country.toUpperCase()
+//   createCountryDiv(country1);
+//   }
+// }
+
+
+
+  
+
+
+
 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
