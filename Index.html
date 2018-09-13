@@ -17,11 +17,25 @@
 body {
 width: fit-content;
 margin: auto;
+background-color: azure;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  color: rgb(254, 219, 250);
+  font-size: 2.3rem;
+  margin-top: 0;
 }
 
 #inputField {
-width: 70%;
-height: 1.5rem;
+width: 50%;
+height: 2.5rem;
+border-radius: 5px;
+border: none;
+outline: none;
+padding: .3rem;
+font-size: 1rem;
+text-align: center;
 }
 
 #hidden-input {
@@ -32,15 +46,22 @@ left: -10000000px;
 
 header {
 border-radius: 5px;
-width:700px;
-height:110px;
+width: 700px;
+height: 16rem;
 font-family: 'Montserrat', sans-serif;
 font-weight: bold;
 background-color: blueviolet;
+margin-top: 1rem;
 margin-bottom: 1rem;
 display: flex;
-justify-content: space-around;
-padding: 35px 60px;
+flex-direction: column;
+justify-content: space-between;
+padding: 35px ;
+}
+
+header div {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .color-div {
@@ -51,6 +72,7 @@ font-family: 'Montserrat', sans-serif;
 font-weight: bold;
 color: #595959;
 position: relative;
+margin-bottom: 5px;
 }
 
 .color-text {
@@ -69,18 +91,39 @@ padding: 7px;
 font-weight: bold;
 font-size: 14px;
 border-radius: 5px;
+}
 
+#generateButton, #stopButton {
+  display: block;
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: azure;
+  border: none;
+  color: #302f2f;
+}
+
+p {
+  width: 100%;
+  text-align: center;
+  color:  rgb(254, 219, 250);
+  font-weight: normal;
 }
   
   </style>
 </head>
 
 <body>
-  <!-- <header>
-    <input type="text" id="inputField">
-    <input type="submit" value="Generate" id="generateButton">
-    <input type="submit" value="Stop" id="stopButton">
-  </header> -->
+  <header>
+    <h1>Hexadecimal colors generator</h1>
+    <div>
+      <input type="text" id="inputField" placeholder="Write the number of colors...">
+      <button type="submit" id="generateButton">Generate</button>
+      <button type="submit" id="stopButton">Stop</button>
+    </div>
+    <p>Colors change peoples emotions so put meaningful colors on your site!</p>
+  </header>
 
   <main>
 
@@ -1114,101 +1157,101 @@ function createHTML (){
 //      divs and display hexadecimal color inside the div. 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-// gets number or colors the user wants
-// var intervalID;
+//gets number or colors the user wants
+var intervalID;
 
-// function numberOfColors(){
-//   let numberOfGenColors;
-//   let inputElem = document.querySelector('#inputField');
-//   let inputValue = inputElem.value;
-//     if(inputValue){
-//       numberOfGenColors = inputValue;
-//     }
-//     return numberOfGenColors
-// };
+function numberOfColors(){
+  let numberOfGenColors;
+  let inputElem = document.querySelector('#inputField');
+  let inputValue = inputElem.value;
+    if(inputValue){
+      numberOfGenColors = inputValue;
+    }
+    return numberOfGenColors
+};
 
-// //event listener for button START
-// let generateButton= document.querySelector('#generateButton')
-// generateButton.addEventListener('click', startInterval);
+//event listener for button START
+let generateButton= document.querySelector('#generateButton')
+generateButton.addEventListener('click', startInterval);
 
 
 
-// //copy button
-// function stopIntervalAndCopy (){
-//   window.clearInterval(intervalID)
-//   let buttons = document.querySelectorAll('.copy-button')
-//   buttons.forEach((button) => {
-//     button.style.visibility = 'visible';
-//   })
-// }
+//copy button
+function stopIntervalAndCopy (){
+  window.clearInterval(intervalID)
+  let buttons = document.querySelectorAll('.copy-button')
+  buttons.forEach((button) => {
+    button.style.visibility = 'visible';
+  })
+}
 
-// function mouseOut (){
-//  let buttons = document.querySelectorAll('.copy-button')
-//   buttons.forEach((button) => {
-//     button.style.visibility = 'hidden';
-//   })
-// }
+function mouseOut (){
+ let buttons = document.querySelectorAll('.copy-button')
+  buttons.forEach((button) => {
+    button.style.visibility = 'hidden';
+  })
+}
 
-// function createColorDiv (){
-//   let element = createHTML();
-//   let hexValue = randomHexaNumberGenerator1();
-//   let text = createHTML();
-//   element.appendChild(text);
-//   element.className = 'color-div'
-//   text.textContent = hexValue;
-//   text.id = hexValue;
-//   text.className = 'color-text';
-//   element.style.backgroundColor = hexValue;
-//   let button = document.createElement('input');
-//   element.appendChild(button);
-//   button.setAttribute('type','submit');
-//   button.setAttribute('value','Copy');
-//   button.className = 'copy-button'; 
-//   button.style.visibility = 'hidden';
-//   element.addEventListener('mouseover', stopIntervalAndCopy);
-//   element.addEventListener('mouseout', mouseOut);
+function createColorDiv (){
+  let element = createHTML();
+  let hexValue = randomHexaNumberGenerator1();
+  let text = createHTML();
+  element.appendChild(text);
+  element.className = 'color-div'
+  text.textContent = hexValue;
+  text.id = hexValue;
+  text.className = 'color-text';
+  element.style.backgroundColor = hexValue;
+  let button = document.createElement('input');
+  element.appendChild(button);
+  button.setAttribute('type','submit');
+  button.setAttribute('value','Copy');
+  button.className = 'copy-button'; 
+  button.style.visibility = 'hidden';
+  element.addEventListener('mouseover', stopIntervalAndCopy);
+  element.addEventListener('mouseout', mouseOut);
   
-//   let input = document.createElement('input');
-//   element.appendChild(input);
-//   input.value = hexValue;
-//   input.id = 'hidden-input';
+  let input = document.createElement('input');
+  element.appendChild(input);
+  input.value = hexValue;
+  input.id = 'hidden-input';
 
-//   function copyToClipboard (){
-//     input.focus();
-//     input.setSelectionRange(0, 9999);
-//     document.execCommand('copy');
-//   }
+  function copyToClipboard (){
+    input.focus();
+    input.setSelectionRange(0, 9999);
+    document.execCommand('copy');
+  }
 
-//   button.addEventListener('click', copyToClipboard);  
-// }
+  button.addEventListener('click', copyToClipboard);  
+}
  
 
-// function startInterval (){
-//   intervalID = window.setInterval(generateMultiple, 2000);
-//   console.log("id",intervalID);
-// }
+function startInterval (){
+  intervalID = window.setInterval(generateMultiple, 2000);
+  console.log("id",intervalID);
+}
 
-// //generates color divs the specified number of times
-// function generateMultiple (){
-//   main.innerHTML = '';
-//   for (let i = 0; i < numberOfColors(); i++){
-//     createColorDiv();
-//   }
-// }
-// function stopInterval(){
-//     window.clearInterval(intervalID);
-//     console.log("id-stop",intervalID);
-// } 
-// let stopButton= document.querySelector('#stopButton')
-// stopButton.addEventListener('click', stopInterval);
+//generates color divs the specified number of times
+function generateMultiple (){
+  main.innerHTML = '';
+  for (let i = 0; i < numberOfColors(); i++){
+    createColorDiv();
+  }
+}
+function stopInterval(){
+    window.clearInterval(intervalID);
+    console.log("id-stop",intervalID);
+} 
+let stopButton= document.querySelector('#stopButton')
+stopButton.addEventListener('click', stopInterval);
 
 
 // _____________________________________________________________________________________________________________________
 // IV. Set a time interval to make generate all the time, and duration is 3s(3000). 
 // _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-// function getColors (){
-//   var intervalID = window.setInterval(generateMultiple, 3000);
-//   }
+function getColors (){
+  var intervalID = window.setInterval(generateMultiple, 3000);
+  }
 
 
 // _____________________________________________________________________________________________________________________
@@ -1260,7 +1303,7 @@ function createHTML (){
 // }
 
 
-// // if (matchWord){
+//  if (matchWord){
 //   const searchAny = document.querySelector('#starting-word');
 //   searchAny.addEventListener('click',createCountry)
 // } else {
