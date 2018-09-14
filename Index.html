@@ -99,9 +99,16 @@ border-radius: 5px;
   width: 6rem;
   border-radius: 5px;
   font-size: 1rem;
-  background-color: azure;
   border: none;
   color: #302f2f;
+}
+
+#generateButton {
+  background-color: azure;
+}
+
+#stopButton {
+  background-color: rgb(238, 192, 192)
 }
 
 p {
@@ -1176,12 +1183,12 @@ function numberOfColors(){
 function stopIntervalAndCopy (){
   window.clearInterval(intervalID)
   let buttons = document.querySelectorAll('.copy-button')
-  buttons.forEach((button) => {button.style.visibility = 'visible';})
+  buttons.forEach(button => button.style.visibility = 'visible')
 }
 
 function mouseOut (){
  let buttons = document.querySelectorAll('.copy-button')
-  buttons.forEach((button) => { button.style.visibility = 'hidden';})
+  buttons.forEach(button => button.style.visibility = 'hidden')
 }
 
 function createColorDiv (){
@@ -1224,11 +1231,10 @@ function generateMultiple (){
 }
 
 let generateButton = document.querySelector('#generateButton')
-generateButton.addEventListener('click', function(){
-  intervalID = window.setInterval(generateMultiple, 2000);});
+generateButton.addEventListener('click', () => { intervalID = window.setInterval(generateMultiple, 2000)});
 
 let stopButton = document.querySelector('#stopButton')
-stopButton.addEventListener('click', function(){ window.clearInterval(intervalID);});
+stopButton.addEventListener('click', () => { window.clearInterval(intervalID)});
 
 // _____________________________________________________________________________________________________________________
 // c) Make search for countries array that filters by any word or starting word and displays countries in colored squares
